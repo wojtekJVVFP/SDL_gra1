@@ -31,6 +31,7 @@ bool CApp::OnInit() {
     {
         return false;
     }
+    p.load_player_texture("bmp/player.bmp", renderer);
 
 
 

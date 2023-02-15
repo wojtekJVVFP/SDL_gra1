@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="sdl gra1" />
+		<Option title="sdl_gra1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -15,6 +15,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="C:/Program Files/CodeBlocks/MinGW/x86_64-w64-mingw32/include/SDL2" />
+					<Add directory="../SDL_gra1" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +25,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="../SDL_gra1" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -53,8 +55,10 @@
 		<Unit filename="CApp_OnRender.h" />
 		<Unit filename="CSurface.cpp" />
 		<Unit filename="CSurface.h" />
+		<Unit filename="Player.h" />
 		<Unit filename="keys_handling.cpp" />
 		<Unit filename="keys_handling.h" />
+		<Unit filename="src/Player.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

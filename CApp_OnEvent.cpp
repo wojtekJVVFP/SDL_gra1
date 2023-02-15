@@ -1,24 +1,28 @@
 #include "CApp.h"
+#include <iostream>
 
-void CApp::OnEvent(SDL_Event* Event)
+using namespace std;
+
+
+void CApp::OnEvent(SDL_Event* Event, Keys_Handling* keys)
 {
-    SDL_Event event;
+    //SDL_Event event;
+    switch (Event->type)
+    {
+        case SDL_QUIT:
+            Running = false;
+            break;
+        case SDL_KEYDOWN:
+            cout<<"keydown ";
+            keys -> key_down(&Event->key, &p);
+            cout<<p.pos_x;
 
-    while (SDL_PollEvent(&event))
-	{
-		switch (event.type)
-		{
-			case SDL_QUIT:
-				Running = false;
-				break;
-            case SDL_KEYDOWN:
-                Keys_Handling::key_down(&event.key, &pos_x, &pos_y);
-            case SDL_KEYUP:
-                Keys_Handling::key_up(&event.key, &pos_x, &pos_y);
+        case SDL_KEYUP:
+            cout<<"keyup ";
+            keys -> key_up(&Event->key);
 
-			default:
-				break;
-		}
-	}
+        default:
+            break;
+    }
 
 }

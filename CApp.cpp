@@ -7,9 +7,6 @@ CApp::CApp()
     Window = NULL;
     renderer = NULL;
     Running = true;
-
-    pos_x = 0;
-    pos_y = 0;
 }
 
 int CApp::OnExecute()
@@ -20,12 +17,14 @@ int CApp::OnExecute()
     }
 
     SDL_Event Event;
+    Keys_Handling keys;
+//Co zrobić, żeby obiekt był dostęny we wszystkich funkcjach
 
     while(Running)
     {
         while(SDL_PollEvent(&Event))
         {
-            OnEvent(&Event);
+            OnEvent(&Event, &keys);
         }
 
         OnLoop();
@@ -42,7 +41,6 @@ void Read_PosXY();
 int main(int argc, char* argv[])
 {
     CApp theApp;
-    Keys_Handling keys;
 
     return theApp.OnExecute();
 }

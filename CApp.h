@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include "CSurface.h"
 #include "keys_handling.h"
+#include "Player.h"
 
 #define WIDTH 800
 #define HEIGHT 600
@@ -27,19 +28,18 @@ private:
     SDL_Texture* Texture_Display;
     SDL_Texture* Texture;
 
+    class Player p;
+
 
 
 public:
     CApp();
     int OnExecute();
     bool OnInit();
-    void OnEvent(SDL_Event* Event);
+    void OnEvent(SDL_Event* Event, class Keys_Handling* keys);
     void OnLoop();
     void OnRender();
     void OnCleanup();
-
-    unsigned int pos_x;
-    unsigned int pos_y;
 };
 
 

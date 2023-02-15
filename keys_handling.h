@@ -5,11 +5,17 @@
 
 class Keys_Handling
 {
-public:
-    Keys_Handling();
+private:
 
-    static void key_up(SDL_KeyboardEvent* event, unsigned int* pos_x, unsigned int* pos_y);
-    static void key_down(SDL_KeyboardEvent* event, unsigned int* pos_x, unsigned int* pos_y);
+public:
+    int up;
+    int down;
+    int left;
+    int right;
+    Keys_Handling(int u=0, int d=0, int l=0, int r=0);
+
+    void key_up(SDL_KeyboardEvent* event);
+    void key_down(SDL_KeyboardEvent* event, class Player* p);
 };
 
 
