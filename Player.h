@@ -10,6 +10,7 @@ class Player
         int get_x();
         int get_y();
         bool load_player_texture(char* filename, SDL_Renderer* render);
+        void render(SDL_Renderer* renderer);
 
         friend class Keys_Handling;
         friend class CApp;
@@ -21,6 +22,9 @@ class Player
         int pos_x;
         int pos_y;
         SDL_Texture* player_texture;
+        unsigned int player_width;
+        unsigned int player_height;
+        SDL_Rect player_rect;
 
 };
 

@@ -1,12 +1,13 @@
 # depslib dependency file v1.0
-1676472946 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.cpp
+1677098467 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.cpp
 	"CApp.h"
 
-1676472946 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.h
+1676815202 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.h
 	<SDL.h>
 	"CSurface.h"
 	"keys_handling.h"
 	"Player.h"
+	"Map.h"
 
 1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
@@ -397,7 +398,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1676223427 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.h
+1677098258 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.h
 	<SDL.h>
 
 1676473199 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.h
@@ -410,25 +411,41 @@
 	"CApp.h"
 	<iostream>
 
-1676481777 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_oninit.cpp
+1677097769 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_oninit.cpp
 	"CApp.h"
+	<iostream>
 
 1676306456 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onloop.cpp
 	"CApp.h"
 
-1676480846 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onrender.cpp
+1677098258 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onrender.cpp
 	"CApp.h"
 
-1676222460 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.cpp
+1677099468 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.cpp
+	<iostream>
 	"CSurface.h"
+	"Player.h"
+	"Map.h"
+	"color_definition.h"
 
 1676480102 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.cpp
 	"keys_handling.h"
 	<iostream>
 
-1676481762 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\player.h
+1677097227 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\player.h
 
-1676479945 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\player.cpp
+1677098368 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\player.cpp
+	<iostream>
 	"CApp.h"
 	"Player.h"
+	"color_definition.h"
+
+1677097227 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
+	"CApp.h"
+	"Map.h"
+	"color_definition.h"
+
+1677097227 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
+
+1676813331 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\color_definition.h
 

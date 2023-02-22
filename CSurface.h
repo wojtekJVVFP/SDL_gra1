@@ -10,7 +10,9 @@ public:
 
 public:
     static SDL_Texture* OnLoad(char* File, SDL_Renderer* render);
-    static bool OnDraw(SDL_Texture* texture, int X, int Y, SDL_Renderer* render);
+    static bool OnDraw(SDL_Texture* texture, SDL_Renderer* render, class Player* p);
+
+    friend class CApp;
 };
 
 #endif

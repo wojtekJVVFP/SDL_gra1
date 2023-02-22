@@ -16,6 +16,7 @@
 					<Add option="-g" />
 					<Add directory="C:/Program Files/CodeBlocks/MinGW/x86_64-w64-mingw32/include/SDL2" />
 					<Add directory="../SDL_gra1" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -26,6 +27,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="../SDL_gra1" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -56,8 +58,11 @@
 		<Unit filename="CSurface.cpp" />
 		<Unit filename="CSurface.h" />
 		<Unit filename="Player.h" />
+		<Unit filename="color_definition.h" />
+		<Unit filename="include/Map.h" />
 		<Unit filename="keys_handling.cpp" />
 		<Unit filename="keys_handling.h" />
+		<Unit filename="src/Map.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

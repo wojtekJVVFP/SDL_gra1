@@ -5,6 +5,7 @@
 #include "CSurface.h"
 #include "keys_handling.h"
 #include "Player.h"
+#include "Map.h"
 
 #define WIDTH 800
 #define HEIGHT 600
@@ -29,6 +30,7 @@ private:
     SDL_Texture* Texture;
 
     class Player p;
+    class Map mapa;
 
 
 

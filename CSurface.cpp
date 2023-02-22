@@ -1,4 +1,10 @@
+#include <iostream>
 #include "CSurface.h"
+#include "Player.h"
+#include "Map.h"
+#include "color_definition.h"
+
+using namespace std;
 
 CSurface::CSurface()
 {
@@ -18,35 +24,38 @@ SDL_Texture* CSurface::OnLoad(char* File, SDL_Renderer* render)
     return Texture_Return;
 }
 
-bool CSurface::OnDraw(SDL_Texture* texture, int X, int Y, SDL_Renderer* renderer)
+bool CSurface::OnDraw(SDL_Texture* texture, SDL_Renderer* renderer, class Player* p)
 {
     if(texture == NULL)
     {
         return false;
     }
-    #define WHITE 255,255,255
-    SDL_Rect DestR;
 
-    DestR.x = 500;
-    DestR.y = 300;
-    DestR.h = 100;
-    DestR.w = 200;
-    SDL_Rect src = {10,10,100,50};
-    SDL_Rect dst = {0,0,100,50};
+    Map mapa;
+    Player p1;
+    Player p2;
 
-    src.x = X;
-    src.y = Y;
+
+    p1.pos_x = 10;
+
+    p2.pos_x = p->get_x();
+
+    //cout<<p1.get_x()<<" "<<p2.get_x()<<endl;
+
 
     SDL_SetRenderDrawColor(renderer, WHITE, 255);
     SDL_RenderClear(renderer);
-    SDL_SetRenderDrawColor(renderer, 0,0,0, 255);
-    SDL_RenderDrawLine(renderer, 10, 10, 300, 100);
+    SDL_SetRenderDrawColor(renderer, BLACK, 255);
+    mapa.render(renderer);
+    p->render(renderer);
 
-    SDL_RenderDrawRect(renderer, &DestR);
-    SDL_RenderCopy(renderer, texture, &dst, &src);
+
+//problem z ładowaniem tekstury gracza, inne tekstury ładuje dobrze
+    //p.load_player_texture("bmp/dodge.bmp", renderer);
+
     SDL_RenderPresent(renderer);
 
-    //SDL_BlitSurface(Surf_Src, NULL, Surf_Dest, &DestR);
+
 
     return true;
 }

@@ -1,4 +1,7 @@
 #include "CApp.h"
+#include <iostream>
+
+using namespace std;
 
 bool CApp::OnInit() {
     int rendererFlags = SDL_RENDERER_ACCELERATED;
@@ -31,7 +34,10 @@ bool CApp::OnInit() {
     {
         return false;
     }
-    p.load_player_texture("bmp/player.bmp", renderer);
+    if(p.load_player_texture("bmp/dodge.bmp", renderer) == true)
+    {
+        cout<<"tekstura gracza załadowana OK"<<endl;
+    }
 
 
 

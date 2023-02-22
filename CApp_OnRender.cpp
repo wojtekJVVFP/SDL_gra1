@@ -2,7 +2,9 @@
 
 void CApp::OnRender()
 {
-    CSurface::OnDraw(Texture, p.pos_x, p.pos_y, renderer);
+    //SDL_RenderClear(renderer)
+
+    CSurface::OnDraw(Texture, renderer, &p);
     //CSurface::OnDraw(Texture, 0, 0, renderer);
 
 }
