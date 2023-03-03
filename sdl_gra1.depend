@@ -401,13 +401,13 @@
 1677098258 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.h
 	<SDL.h>
 
-1676473199 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.h
+1677864563 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.h
 	"CApp.h"
 
 1676205651 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_oncleanup.cpp
 	"CApp.h"
 
-1676473299 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onevent.cpp
+1677857000 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onevent.cpp
 	"CApp.h"
 	<iostream>
 
@@ -421,14 +421,14 @@
 1677098258 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onrender.cpp
 	"CApp.h"
 
-1677099468 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.cpp
+1677864085 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.cpp
 	<iostream>
 	"CSurface.h"
 	"Player.h"
 	"Map.h"
 	"color_definition.h"
 
-1676480102 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.cpp
+1677860115 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.cpp
 	"keys_handling.h"
 	<iostream>
 
@@ -445,7 +445,19 @@
 	"Map.h"
 	"color_definition.h"
 
-1677097227 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
+1677856891 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
 
 1676813331 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\color_definition.h
+
+1677098368 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\player.cpp
+	<iostream>
+	"CApp.h"
+	"Player.h"
+	"color_definition.h"
+
+1677862733 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\map.cpp
+	<iostream>
+	"CApp.h"
+	"Map.h"
+	"color_definition.h"
 

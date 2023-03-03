@@ -57,13 +57,13 @@
 		<Unit filename="CApp_OnRender.h" />
 		<Unit filename="CSurface.cpp" />
 		<Unit filename="CSurface.h" />
+		<Unit filename="Map.cpp" />
+		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
 		<Unit filename="color_definition.h" />
 		<Unit filename="include/Map.h" />
 		<Unit filename="keys_handling.cpp" />
 		<Unit filename="keys_handling.h" />
-		<Unit filename="src/Map.cpp" />
-		<Unit filename="src/Player.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -49,6 +49,9 @@ bool CSurface::OnDraw(SDL_Texture* texture, SDL_Renderer* renderer, class Player
     mapa.render(renderer);
     p->render(renderer);
 
+    SDL_SetRenderDrawColor(renderer, 255,0,0, 255);
+    SDL_RenderDrawRect(renderer, &(p->player_rect));
+
 
 //problem z ładowaniem tekstury gracza, inne tekstury ładuje dobrze
     //p.load_player_texture("bmp/dodge.bmp", renderer);

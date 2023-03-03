@@ -14,7 +14,7 @@ void CApp::OnEvent(SDL_Event* Event, Keys_Handling* keys)
             break;
         case SDL_KEYDOWN:
             cout<<"keydown ";
-            keys -> key_down(&Event->key, &p);
+            keys -> key_down(&Event->key, &p, &mapa);
             cout<<p.pos_x;
 
         case SDL_KEYUP:
