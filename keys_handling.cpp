@@ -34,6 +34,10 @@ void Keys_Handling::key_up(SDL_KeyboardEvent* event)
 		{
             right = 0;
 		}
+		if (event->keysym.scancode == SDL_SCANCODE_A)
+		{
+
+		}
 	}
 }
 
@@ -91,6 +95,11 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
                p->pos_x += step;
             }
             cout<<p->get_x()<<" "<<p->get_y()<<endl;
+		}
+		if (event->keysym.scancode == SDL_SCANCODE_A)
+		{
+            SDL_Rect stone = {p->get_x()+p->player_width+1, p->get_y(), 100,100};
+            m->add_map_object(2, stone);
 		}
 	}
 

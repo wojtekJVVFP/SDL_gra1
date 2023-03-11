@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1677098467 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.cpp
+1678358992 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.cpp
 	"CApp.h"
 
 1676815202 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.h
@@ -398,7 +398,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1677098258 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.h
+1678548774 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.h
 	<SDL.h>
 
 1677864563 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.h
@@ -411,24 +411,24 @@
 	"CApp.h"
 	<iostream>
 
-1677097769 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_oninit.cpp
+1678358576 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_oninit.cpp
 	"CApp.h"
 	<iostream>
 
 1676306456 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onloop.cpp
 	"CApp.h"
 
-1677098258 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onrender.cpp
+1678548774 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_onrender.cpp
 	"CApp.h"
 
-1677864085 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.cpp
+1678548774 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.cpp
 	<iostream>
 	"CSurface.h"
 	"Player.h"
 	"Map.h"
 	"color_definition.h"
 
-1677860115 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.cpp
+1678549355 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.cpp
 	"keys_handling.h"
 	<iostream>
 
@@ -445,7 +445,7 @@
 	"Map.h"
 	"color_definition.h"
 
-1677856891 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
+1678549238 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
 
 1676813331 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\color_definition.h
 
@@ -455,7 +455,7 @@
 	"Player.h"
 	"color_definition.h"
 
-1677862733 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\map.cpp
+1678549238 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\map.cpp
 	<iostream>
 	"CApp.h"
 	"Map.h"

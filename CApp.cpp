@@ -5,10 +5,12 @@
 + można przekazać gracza/y oraz mapki jako argument do funkcji rysującej
 
 + Jak uzyskać rozmiar gracza tj. tekstury bądź powierzchni? - potrzebne do poprawnego kopiowania tekstury gracza do tekstury tła
-
-- Pisać klasę do rysowania mapki na ekranie
 + mie ładuje się gracz, prawdopodobnie problem z ładowaniem tekstury - tekstura ok,
 po przekazaniu obiektu Player przez wskaźnik zadziałało
++ dodana funkcja wykrywająca kolizję gracza z obiektami mapki
+- pisać dynamiczne dodawanie obiektów na ekranie, czyli będzie drugi wskaźnik z tablicą o 1 większą, kopiowanie starej tablicy do nowej, kasowanie starego wskaźnika, przypisanie nowego wsk
+- Pisać klasę do rysowania mapki na ekranie
+
 
 
 */

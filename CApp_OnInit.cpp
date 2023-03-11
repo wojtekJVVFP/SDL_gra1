@@ -7,6 +7,8 @@ bool CApp::OnInit() {
     int rendererFlags = SDL_RENDERER_ACCELERATED;
     int windowFlags = 0;
 
+    cout<<"Wersja C++: "<<__cplusplus<<endl;//Piszę w c++ 14
+
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0)
     {
         return false;

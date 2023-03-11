@@ -11,6 +11,7 @@ class Map
     public:
         Map();
         virtual ~Map();
+        void add_map_object(int obj_id, SDL_Rect object_rect);
         void render(SDL_Renderer* renderer);
         bool player_collides(SDL_Rect r);
 
@@ -18,7 +19,8 @@ class Map
         friend class Keys_Handling;
 
     protected:
-        SDL_Rect map_rects[5];
+        int object_count;   //ilość obiektów do rozmiaru p_map_rects
+        SDL_Rect* map_rects;
 
     private:
 };
