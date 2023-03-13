@@ -8,10 +8,11 @@
 + mie ładuje się gracz, prawdopodobnie problem z ładowaniem tekstury - tekstura ok,
 po przekazaniu obiektu Player przez wskaźnik zadziałało
 + dodana funkcja wykrywająca kolizję gracza z obiektami mapki
-- pisać dynamiczne dodawanie obiektów na ekranie, czyli będzie drugi wskaźnik z tablicą o 1 większą, kopiowanie starej tablicy do nowej, kasowanie starego wskaźnika, przypisanie nowego wsk
++ pisać dynamiczne dodawanie obiektów na ekranie, czyli będzie drugi wskaźnik z tablicą o 1 większą, kopiowanie starej tablicy do nowej, kasowanie starego wskaźnika, przypisanie nowego wsk
++ dodawanie nowego obiektu na ekranie poprzez wciśnięcie klawisza a
 - Pisać klasę do rysowania mapki na ekranie
-
-
+- napisać, żeby łatwiejsze było dodawanie różnych obiektów łącznie z teksturami na ekranie. Mapka mogłaby się składać z obiektów, a nie prostokątów, w zależności od wybranego id
+ będzie inny kształt i tekstura. Id obiektu będzie dawać informację odnośnie tekstury i rozmiarów prostokąta do rysowania, dodatkowe właściwości obiektu to położenie
 
 */
 

@@ -1,6 +1,12 @@
 #ifndef MAP_H
 #define MAP_H
 
+struct Int_bool //struktura używana do zwracania wartości przez funkcję do badania kolizji
+{
+    int ret_int;
+    bool ret_bool;
+};
+
 /*
 
 Klasa
@@ -13,7 +19,7 @@ class Map
         virtual ~Map();
         void add_map_object(int obj_id, SDL_Rect object_rect);
         void render(SDL_Renderer* renderer);
-        bool player_collides(SDL_Rect r);
+        Int_bool player_collides(SDL_Rect r);
 
         friend class CApp;
         friend class Keys_Handling;
@@ -24,5 +30,6 @@ class Map
 
     private:
 };
+
 
 #endif // MAP_H

@@ -5,32 +5,23 @@
 
 using namespace std;
 
-/*
-Jak dynamicznie dodawać obiekty do mapy i liczyć ile ich jest?
-
-*/
-
-
 
 Map::Map()
 {//ctor
-    //map_rects[0] = {100,300,350,200};
-    //map_rects[1] = {500, 300, 100, 200};
-//    map_rects[2] = {470, 600, 50, 100};
-
     object_count = 1;
     map_rects = new SDL_Rect[object_count];
-    map_rects[0] = {100,300,350,200};
+    map_rects[0] = {100,300,350,200};   //pierwszy obiekt na ekranie
 
 }
 Map::~Map()
-{
+{//dtor
     delete[] map_rects;//dtor
 }
 
 /*
 Funkcja do dodawania jednego obiektu na końcu listy map_rects
-
+WE: - obj_id,
+    - obj_rect - prostokąt do dodania
 obj_count = 1;
 */
 void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
@@ -50,15 +41,6 @@ void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
 
     object_count++;
 }
-
-
-
-
-
-/*
-Jak utworzyć nową teksturę i narysować na niej linie i prostokąty?
-
-*/
 
 void Map::render(SDL_Renderer* renderer)
 {
@@ -82,8 +64,10 @@ zwraca true, gdy podany rect koliduje z mapą
 
 
 */
-bool Map::player_collides(SDL_Rect r)
+Int_bool Map::player_collides(SDL_Rect r)
 {
+    Int_bool ret;
+
     for(int i=0; i<object_count; i++)
     {
         SDL_Rect m = map_rects[i];
@@ -115,8 +99,12 @@ bool Map::player_collides(SDL_Rect r)
 
         if(x_collides && y_collides)
         {
-            return true;
+            ret.ret_bool = true;
+            ret.ret_int = i;
+            return ret;
         }
     }
-    return false;
+    ret.ret_bool = false;
+    ret.ret_int = 0;
+    return ret;
 }
