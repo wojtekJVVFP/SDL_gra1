@@ -38,6 +38,10 @@ void Keys_Handling::key_up(SDL_KeyboardEvent* event)
 		{
 
 		}
+		if (event->keysym.scancode == SDL_SCANCODE_S)
+		{
+
+		}
 	}
 }
 
@@ -54,6 +58,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
 	{
 		SDL_Rect temp_rect = p->player_rect;
 		Int_bool t;
+		int range = 20;  //odległość do skasowania obiektu
 
 		if (event->keysym.scancode == SDL_SCANCODE_UP)
 		{
@@ -114,6 +119,20 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             SDL_Rect stone = {p->get_x()+p->player_width+1, p->get_y(), 100,100};
             m->add_map_object(2, stone);
 		}
+		if (event->keysym.scancode == SDL_SCANCODE_S)
+		{
+            temp_rect.w += 2*range;
+            temp_rect.h += 2*range;
+            temp_rect.x -= range;
+            temp_rect.y -= range;
+            t = m->player_collides(p->player_rect);
+            if((t.ret_bool) == true)
+            {
+                m->delete_map_object(t.ret_int);
+            }
+
+		}
+
 	}
 
 }

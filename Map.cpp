@@ -42,10 +42,37 @@ void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
     object_count++;
 }
 
+
+/*
+funkcja do usuwania z mapy jednego obiektu o numerze obj_no
+
+
+*/
+void Map::delete_map_object(int obj_no)
+{
+    //tworzenie nowej tablicy
+    SDL_Rect* temp_obj = new SDL_Rect[object_count-1];
+
+    //przepisywanie danych z map_rects do temp_obj z pominięciem obiektu o numerze obj_no
+    for(int i=0; i<obj_no; i++)
+    {
+       temp_obj[i] = map_rects[i];
+    }
+    for(int i=obj_no+1; i<object_count; i++)
+    {
+       temp_obj[i-1] = map_rects[i];
+    }
+
+    delete[] map_rects;
+    map_rects = temp_obj;
+
+    object_count--;
+}
+
 void Map::render(SDL_Renderer* renderer)
 {
     SDL_SetRenderDrawColor(renderer, BLACK, 255);
-    SDL_RenderDrawLine(renderer, 100, 200, 300, 200);
+    //SDL_RenderDrawLine(renderer, 100, 200, 300, 200);
 
     for(int i=0; i<object_count; i++)
     {

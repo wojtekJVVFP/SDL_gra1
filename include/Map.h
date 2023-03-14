@@ -18,6 +18,7 @@ class Map
         Map();
         virtual ~Map();
         void add_map_object(int obj_id, SDL_Rect object_rect);
+        void delete_map_object(int obj_no);
         void render(SDL_Renderer* renderer);
         Int_bool player_collides(SDL_Rect r);
 
