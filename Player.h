@@ -9,7 +9,7 @@ class Player
         virtual ~Player();
         int get_x();
         int get_y();
-        bool load_player_texture(char* filename, SDL_Renderer* render);
+        bool load_player_texture(const char* filename, SDL_Renderer* render);
         void render(SDL_Renderer* renderer);
 
         friend class Keys_Handling;

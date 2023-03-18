@@ -4,8 +4,8 @@
 using namespace std;
 
 bool CApp::OnInit() {
-    int rendererFlags = SDL_RENDERER_ACCELERATED;
-    int windowFlags = 0;
+    //int rendererFlags = SDL_RENDERER_ACCELERATED;
+    //int windowFlags = 0;
 
     cout<<"Wersja C++: "<<__cplusplus<<endl;//Piszę w c++ 14
 
@@ -39,6 +39,12 @@ bool CApp::OnInit() {
     if(p.load_player_texture("bmp/dodge.bmp", renderer) == true)
     {
         cout<<"tekstura gracza załadowana OK"<<endl;
+    }
+
+
+    if(mapa.load_object_textures(renderer) == true)
+    {
+        cout<<"tekstury obiektów załadowane OK"<<endl;
     }
 
 

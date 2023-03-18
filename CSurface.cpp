@@ -10,7 +10,7 @@ CSurface::CSurface()
 {
 }
 
-SDL_Texture* CSurface::OnLoad(char* File, SDL_Renderer* render)
+SDL_Texture* CSurface::OnLoad(const char* File, SDL_Renderer* render)
 {
     SDL_Surface* Surf_Temp = NULL;
     SDL_Texture* Texture_Return = NULL;

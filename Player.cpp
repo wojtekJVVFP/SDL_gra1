@@ -31,7 +31,7 @@ int Player::get_y()
   return pos_y;
 }
 
-bool Player::load_player_texture(char* filename, SDL_Renderer* render)
+bool Player::load_player_texture(const char* filename, SDL_Renderer* render)
 {
     SDL_Surface* Surf_Temp = NULL;
 

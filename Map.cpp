@@ -37,7 +37,7 @@ void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
     temp_obj[object_count] = {obj_rect.x, obj_rect.y, obj_rect.w, obj_rect.h};
 
     delete[] map_rects;
-    map_rects = temp_obj;
+    map_rects = temp_obj;   //temp_obj nie będzie tu kasowane, bo pamięć zostanie zwolniona w destruktorze klasy
 
     object_count++;
 }
@@ -77,6 +77,7 @@ void Map::render(SDL_Renderer* renderer)
     for(int i=0; i<object_count; i++)
     {
         SDL_RenderDrawRect(renderer, &map_rects[i]);
+        SDL_RenderCopy(renderer, stone_texture, NULL, &map_rects[i]);
     }
 
     //cout<<"Rozmiar obiektu: "<<sizeof(SDL_Rect)<<endl;
@@ -91,7 +92,7 @@ zwraca true, gdy podany rect koliduje z mapą
 
 
 */
-Int_bool Map::player_collides(SDL_Rect r)
+Int_bool Map::collide_rect(SDL_Rect r)
 {
     Int_bool ret;
 
@@ -134,4 +135,37 @@ Int_bool Map::player_collides(SDL_Rect r)
     ret.ret_bool = false;
     ret.ret_int = 0;
     return ret;
+}
+
+bool Map::load_object_textures(SDL_Renderer* render)
+{
+    SDL_Surface* Surf_Temp = NULL;
+    char* filename = "bmp/stone.bmp";
+
+    if( (Surf_Temp = SDL_LoadBMP(filename) ) == NULL)
+    {
+        cout<<"błąd";
+        return false;
+    }
+
+    //player_height = Surf_Temp->h;
+    //player_width = Surf_Temp->w;
+   // player_rect = Surf_Temp->clip_rect;
+
+
+    if((stone_texture = SDL_CreateTextureFromSurface(render, Surf_Temp)) == NULL)
+    {
+        cout<<"błąd";
+        return false;
+    }
+    //Uint8 a=255;
+    //SDL_SetTextureAlphaMod(player_texture,a);
+
+
+    //initialising player dimension
+    //player_height = SDL_Get
+
+    SDL_FreeSurface(Surf_Temp);
+
+    return true;
 }

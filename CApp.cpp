@@ -13,7 +13,13 @@ po przekazaniu obiektu Player przez wskaźnik zadziałało
 - Pisać klasę do rysowania mapki na ekranie
 - napisać, żeby łatwiejsze było dodawanie różnych obiektów łącznie z teksturami na ekranie. Mapka mogłaby się składać z obiektów, a nie prostokątów, w zależności od wybranego id
  będzie inny kształt i tekstura. Id obiektu będzie dawać informację odnośnie tekstury i rozmiarów prostokąta do rysowania, dodatkowe właściwości obiektu to położenie
-
+    - Obiekty na ekranie będą rysowane razem z teksturami - tekstury będę ładowane
+    - Pisać strukturę do przechowania informacji o obiekcie: SDL_Rect, id, które będzie później wykorzystane do narysowania w render
+    - dane o obiektach w tablicy map_rects - będą struktury object_data
+    - informacje o stosowanych numerach tekstur we funkcji render
+    - tesktury zostaną załadowane w kolejności do tablicy tekstur (tablica wskaźników na kolejne tekstury)
+    - można zacząć liczenie od 0, żeby numery id odpowiadały 1:1 położeniom w obrębie tablicy tekstur
+    - ładowanie tekstur z pliku w load_object_textures
 */
 
 CApp::CApp()

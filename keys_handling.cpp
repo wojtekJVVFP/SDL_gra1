@@ -65,7 +65,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             up = 1;
 
             temp_rect.y -= step;
-            t = m->player_collides(temp_rect);
+            t = m->collide_rect(temp_rect);
             if((t.ret_bool) == false)
             {
                 p->pos_y -= step;
@@ -83,7 +83,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
 			down = 1;
 
 			temp_rect.y += step;
-            if((m->player_collides(temp_rect).ret_bool) == false)
+            if((m->collide_rect(temp_rect).ret_bool) == false)
             {
                p->pos_y += step;
             }
@@ -95,7 +95,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             left = 1;
 
             temp_rect.x -= step;
-            if((m->player_collides(temp_rect).ret_bool) == false)
+            if((m->collide_rect(temp_rect).ret_bool) == false)
             {
                p->pos_x -= step;
             }
@@ -108,7 +108,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             right = 1;
 
             temp_rect.x += step;
-            if((m->player_collides(temp_rect).ret_bool) == false)
+            if((m->collide_rect(temp_rect).ret_bool) == false)
             {
                p->pos_x += step;
             }
@@ -125,7 +125,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             temp_rect.h += 2*range;
             temp_rect.x -= range;
             temp_rect.y -= range;
-            t = m->player_collides(p->player_rect);
+            t = m->collide_rect(temp_rect);
             if((t.ret_bool) == true)
             {
                 m->delete_map_object(t.ret_int);

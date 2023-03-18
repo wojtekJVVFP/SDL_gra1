@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1678727423 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.cpp
+1679176822 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.cpp
 	"CApp.h"
 
-1676815202 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.h
+1679175081 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp.h
 	<SDL.h>
 	"CSurface.h"
 	"keys_handling.h"
@@ -398,7 +398,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1678548774 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.h
+1679176935 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\csurface.h
 	<SDL.h>
 
 1677864563 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.h
@@ -411,7 +411,7 @@
 	"CApp.h"
 	<iostream>
 
-1678358576 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_oninit.cpp
+1679175522 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\capp_oninit.cpp
 	"CApp.h"
 	<iostream>
 
@@ -428,7 +428,7 @@
 	"Map.h"
 	"color_definition.h"
 
-1678549355 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.cpp
+1678898721 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\keys_handling.cpp
 	"keys_handling.h"
 	<iostream>
 
@@ -445,7 +445,7 @@
 	"Map.h"
 	"color_definition.h"
 
-1678814434 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
+1679176822 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
 
 1676813331 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\color_definition.h
 
@@ -455,7 +455,7 @@
 	"Player.h"
 	"color_definition.h"
 
-1678815295 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\map.cpp
+1679175733 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\map.cpp
 	<iostream>
 	"CApp.h"
 	"Map.h"
