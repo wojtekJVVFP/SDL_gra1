@@ -11,7 +11,7 @@ po przekazaniu obiektu Player przez wskaźnik zadziałało
 + pisać dynamiczne dodawanie obiektów na ekranie, czyli będzie drugi wskaźnik z tablicą o 1 większą, kopiowanie starej tablicy do nowej, kasowanie starego wskaźnika, przypisanie nowego wsk
 + dodawanie nowego obiektu na ekranie poprzez wciśnięcie klawisza a
 - Pisać klasę do rysowania mapki na ekranie
-- napisać, żeby łatwiejsze było dodawanie różnych obiektów łącznie z teksturami na ekranie. Mapka mogłaby się składać z obiektów, a nie prostokątów, w zależności od wybranego id
++ napisać, żeby łatwiejsze było dodawanie różnych obiektów łącznie z teksturami na ekranie. Mapka mogłaby się składać z obiektów, a nie prostokątów, w zależności od wybranego id
  będzie inny kształt i tekstura. Id obiektu będzie dawać informację odnośnie tekstury i rozmiarów prostokąta do rysowania, dodatkowe właściwości obiektu to położenie
     - Obiekty na ekranie będą rysowane razem z teksturami - tekstury będę ładowane
     - Pisać strukturę do przechowania informacji o obiekcie: SDL_Rect, id, które będzie później wykorzystane do narysowania w render
@@ -20,6 +20,8 @@ po przekazaniu obiektu Player przez wskaźnik zadziałało
     - tesktury zostaną załadowane w kolejności do tablicy tekstur (tablica wskaźników na kolejne tekstury)
     - można zacząć liczenie od 0, żeby numery id odpowiadały 1:1 położeniom w obrębie tablicy tekstur - 0 - brak tekstury, 1 - kamień,
     - ładowanie tekstur z pliku w load_object_textures
+- do dodania npc, który się porusza we funkcji OnLoop na początek niech przenika przez obiekty
+- do dodania punkty dla gracza po dotknięciu wybranego obiektu. Obiekt powinien się pojawiać w losowych miejscach i znikać po dotknięciu przez gracza
 */
 
 CApp::CApp()
