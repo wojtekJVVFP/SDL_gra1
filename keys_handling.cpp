@@ -116,8 +116,12 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
 		}
 		if (event->keysym.scancode == SDL_SCANCODE_A)
 		{
-            SDL_Rect stone = {p->get_x()+p->player_width+1, p->get_y(), 100,100};
-            m->add_map_object(2, stone);
+            SDL_Rect block = {p->get_x()+p->player_width+1, p->get_y(), 100,100};
+            if(m->collide_rect(block).ret_bool == false) //gdy nie ma kolizji z innymi obiektami
+            {
+               m->add_map_object(1, block);
+            }
+
 		}
 		if (event->keysym.scancode == SDL_SCANCODE_S)
 		{

@@ -9,8 +9,9 @@ using namespace std;
 Map::Map()
 {//ctor
     object_count = 1;
-    map_rects = new SDL_Rect[object_count];
-    map_rects[0] = {100,300,350,200};   //pierwszy obiekt na ekranie
+    map_rects = new Object[object_count];
+    map_rects[0].rect = {100,300,350,200};   //pierwszy obiekt na ekranie
+    map_rects[0].id = 0;
 
 }
 Map::~Map()
@@ -27,14 +28,15 @@ obj_count = 1;
 void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
 {
     //tworzenie nowej tablicy
-    SDL_Rect* temp_obj = new SDL_Rect[object_count+1];
+    Object* temp_obj = new Object[object_count+1];
 
     //przepisywanie danych z map_rects do temp_obj
     for(int i=0; i<object_count; i++)
     {
        temp_obj[i] = map_rects[i];
     }
-    temp_obj[object_count] = {obj_rect.x, obj_rect.y, obj_rect.w, obj_rect.h};
+    temp_obj[object_count].rect = obj_rect;//{obj_rect.x, obj_rect.y, obj_rect.w, obj_rect.h};
+    temp_obj[object_count].id = obj_id;
 
     delete[] map_rects;
     map_rects = temp_obj;   //temp_obj nie będzie tu kasowane, bo pamięć zostanie zwolniona w destruktorze klasy
@@ -51,7 +53,7 @@ funkcja do usuwania z mapy jednego obiektu o numerze obj_no
 void Map::delete_map_object(int obj_no)
 {
     //tworzenie nowej tablicy
-    SDL_Rect* temp_obj = new SDL_Rect[object_count-1];
+    Object* temp_obj = new Object[object_count-1];
 
     //przepisywanie danych z map_rects do temp_obj z pominięciem obiektu o numerze obj_no
     for(int i=0; i<obj_no; i++)
@@ -76,8 +78,17 @@ void Map::render(SDL_Renderer* renderer)
 
     for(int i=0; i<object_count; i++)
     {
-        SDL_RenderDrawRect(renderer, &map_rects[i]);
-        SDL_RenderCopy(renderer, stone_texture, NULL, &map_rects[i]);
+        SDL_RenderDrawRect(renderer, &map_rects[i].rect);
+        switch(map_rects[i].id)
+        {
+        case 0:
+            break;
+        case 1:
+            SDL_RenderCopy(renderer, stone_texture, NULL, &map_rects[i].rect);
+            break;
+        default:
+            break;
+        }
     }
 
     //cout<<"Rozmiar obiektu: "<<sizeof(SDL_Rect)<<endl;
@@ -98,7 +109,7 @@ Int_bool Map::collide_rect(SDL_Rect r)
 
     for(int i=0; i<object_count; i++)
     {
-        SDL_Rect m = map_rects[i];
+        SDL_Rect m = map_rects[i].rect;
 
         bool x_collides = false;
         bool y_collides = false;
@@ -140,7 +151,7 @@ Int_bool Map::collide_rect(SDL_Rect r)
 bool Map::load_object_textures(SDL_Renderer* render)
 {
     SDL_Surface* Surf_Temp = NULL;
-    char* filename = "bmp/stone.bmp";
+    const char* filename = "bmp/stone.bmp";
 
     if( (Surf_Temp = SDL_LoadBMP(filename) ) == NULL)
     {

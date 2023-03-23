@@ -22,8 +22,8 @@ class Player
         int pos_x;
         int pos_y;
         SDL_Texture* player_texture;
-        unsigned int player_width;
-        unsigned int player_height;
+        int player_width;
+        int player_height;
         SDL_Rect player_rect;
 
 };

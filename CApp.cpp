@@ -15,10 +15,10 @@ po przekazaniu obiektu Player przez wskaźnik zadziałało
  będzie inny kształt i tekstura. Id obiektu będzie dawać informację odnośnie tekstury i rozmiarów prostokąta do rysowania, dodatkowe właściwości obiektu to położenie
     - Obiekty na ekranie będą rysowane razem z teksturami - tekstury będę ładowane
     - Pisać strukturę do przechowania informacji o obiekcie: SDL_Rect, id, które będzie później wykorzystane do narysowania w render
-    - dane o obiektach w tablicy map_rects - będą struktury object_data
+    + dane o obiektach w tablicy map_rects - będą struktury object_data
     - informacje o stosowanych numerach tekstur we funkcji render
     - tesktury zostaną załadowane w kolejności do tablicy tekstur (tablica wskaźników na kolejne tekstury)
-    - można zacząć liczenie od 0, żeby numery id odpowiadały 1:1 położeniom w obrębie tablicy tekstur
+    - można zacząć liczenie od 0, żeby numery id odpowiadały 1:1 położeniom w obrębie tablicy tekstur - 0 - brak tekstury, 1 - kamień,
     - ładowanie tekstur z pliku w load_object_textures
 */
 

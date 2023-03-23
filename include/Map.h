@@ -7,7 +7,7 @@ struct Int_bool //struktura używana do zwracania wartości przez funkcję do ba
     bool ret_bool;
 };
 
-struct object_data
+struct Object
 {
     int id;
     SDL_Rect rect;
@@ -34,7 +34,7 @@ class Map
 
     protected:
         int object_count;   //ilość obiektów do rozmiaru p_map_rects
-        SDL_Rect* map_rects;
+        Object* map_rects;
         SDL_Texture* stone_texture;
 
     private:
