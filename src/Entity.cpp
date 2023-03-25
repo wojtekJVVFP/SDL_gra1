@@ -1,37 +1,44 @@
 #include <iostream>
 #include "CApp.h"
-#include "Player.h"
+#include "Entity.h"
 #include "color_definition.h"
 
 using namespace std;
 
-Player::Player(int x, int y)
+Entity::Entity(int x, int y)
 {
+    //ctor
     pos_x = x;
     pos_y = y;
-    player_texture = NULL;
+    texture = NULL;
     player_width = 0;
     player_height = 0;
     SDL_Rect player_rect;
 }
 
-Player::~Player()
+Entity::~Entity()
 {
-   SDL_DestroyTexture(player_texture);
+    //dtor
+    SDL_DestroyTexture(texture);
 }
 
-int Player::get_x()
+Entity::Entity(const Entity& other)
+{
+    //copy ctor
+}
+
+int Entity::get_x()
 {
    return pos_x;
 }
 
 
-int Player::get_y()
+int Entity::get_y()
 {
   return pos_y;
 }
 
-bool Player::load_player_texture(const char* filename, SDL_Renderer* render)
+bool Entity::load_texture(const char* filename, SDL_Renderer* render)
 {
     SDL_Surface* Surf_Temp = NULL;
 
@@ -46,7 +53,7 @@ bool Player::load_player_texture(const char* filename, SDL_Renderer* render)
     player_rect = Surf_Temp->clip_rect;
 
 
-    if((player_texture = SDL_CreateTextureFromSurface(render, Surf_Temp)) == NULL)
+    if((texture = SDL_CreateTextureFromSurface(render, Surf_Temp)) == NULL)
     {
         cout<<"błąd";
         return false;
@@ -64,11 +71,11 @@ bool Player::load_player_texture(const char* filename, SDL_Renderer* render)
 
 }
 
-void Player::render(SDL_Renderer* renderer)
+void Entity::render(SDL_Renderer* renderer)
 {
     SDL_SetRenderDrawColor(renderer, WHITE, 255);
     player_rect.x = pos_x;
     player_rect.y = pos_y;
 
-    SDL_RenderCopy(renderer, player_texture, NULL, &player_rect);
+    SDL_RenderCopy(renderer, texture, NULL, &player_rect);
 }

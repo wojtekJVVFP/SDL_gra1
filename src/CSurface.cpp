@@ -1,6 +1,7 @@
 #include <iostream>
 #include "CSurface.h"
 #include "Player.h"
+#include "Npc.h"
 #include "Map.h"
 #include "color_definition.h"
 
@@ -24,7 +25,7 @@ SDL_Texture* CSurface::OnLoad(const char* File, SDL_Renderer* render)
     return Texture_Return;
 }
 
-bool CSurface::OnDraw(SDL_Texture* texture, SDL_Renderer* renderer, class Player* p, class Map* m)
+bool CSurface::OnDraw(SDL_Texture* texture, SDL_Renderer* renderer, class Player* p, class Map* m, class Npc* n)
 {
     if(texture == NULL)
     {
@@ -47,6 +48,7 @@ bool CSurface::OnDraw(SDL_Texture* texture, SDL_Renderer* renderer, class Player
     SDL_SetRenderDrawColor(renderer, BLACK, 255);
     m->render(renderer);  //renderowanie obiektów mapy
     p->render(renderer);    //renderowanie gracza
+    n->render(renderer);
 
     SDL_SetRenderDrawColor(renderer, 255,0,0, 255);
     SDL_RenderDrawRect(renderer, &(p->player_rect));

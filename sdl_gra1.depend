@@ -434,13 +434,14 @@
 
 1679563285 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\player.h
 
-1677098368 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\player.cpp
+1679764288 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\player.cpp
 	<iostream>
 	"CApp.h"
 	"Player.h"
 	"color_definition.h"
 
-1677097227 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
+1679563348 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
+	<iostream>
 	"CApp.h"
 	"Map.h"
 	"color_definition.h"
@@ -460,4 +461,70 @@
 	"CApp.h"
 	"Map.h"
 	"color_definition.h"
+
+1679565395 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp.cpp
+	"CApp.h"
+
+1679768979 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\capp.h
+	<SDL.h>
+	"CSurface.h"
+	"keys_handling.h"
+	"Player.h"
+	"Npc.h"
+	"Map.h"
+
+1679767647 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\csurface.h
+	<SDL.h>
+
+1677864563 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\keys_handling.h
+	"CApp.h"
+
+1679766331 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\player.h
+	"Entity.h"
+
+1676205651 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oncleanup.cpp
+	"CApp.h"
+
+1677857000 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onevent.cpp
+	"CApp.h"
+	<iostream>
+
+1679767571 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oninit.cpp
+	"CApp.h"
+	<iostream>
+
+1679768537 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onloop.cpp
+	"CApp.h"
+
+1679767672 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onrender.cpp
+	"CApp.h"
+
+1679768023 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\csurface.cpp
+	<iostream>
+	"CSurface.h"
+	"Player.h"
+	"Npc.h"
+	"Map.h"
+	"color_definition.h"
+
+1676813331 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\color_definition.h
+
+1679764255 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\entity.cpp
+	<iostream>
+	"CApp.h"
+	"Entity.h"
+	"color_definition.h"
+
+1679768132 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\entity.h
+
+1679766721 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\keys_handling.cpp
+	"keys_handling.h"
+	<iostream>
+
+1679768422 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\npc.h
+	"Entity.h"
+
+1679767743 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\npc.cpp
+	"CApp.h"
+	"Npc.h"
 

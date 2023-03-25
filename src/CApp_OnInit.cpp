@@ -36,7 +36,11 @@ bool CApp::OnInit() {
     {
         return false;
     }
-    if(p.load_player_texture("bmp/dodge.bmp", renderer) == true)
+    if(p.load_texture("bmp/dodge.bmp", renderer) == true)
+    {
+        cout<<"tekstura gracza załadowana OK"<<endl;
+    }
+    if(n.load_texture("bmp/npc.bmp", renderer) == true)
     {
         cout<<"tekstura gracza załadowana OK"<<endl;
     }

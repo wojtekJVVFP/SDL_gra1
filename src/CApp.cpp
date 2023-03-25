@@ -20,8 +20,9 @@ po przekazaniu obiektu Player przez wskaźnik zadziałało
     - tesktury zostaną załadowane w kolejności do tablicy tekstur (tablica wskaźników na kolejne tekstury)
     - można zacząć liczenie od 0, żeby numery id odpowiadały 1:1 położeniom w obrębie tablicy tekstur - 0 - brak tekstury, 1 - kamień,
     - ładowanie tekstur z pliku w load_object_textures
-- do dodania npc, który się porusza we funkcji OnLoop na początek niech przenika przez obiekty
++ do dodania npc, który się porusza we funkcji OnLoop na początek niech przenika przez obiekty
 - do dodania punkty dla gracza po dotknięciu wybranego obiektu. Obiekt powinien się pojawiać w losowych miejscach i znikać po dotknięciu przez gracza
+- do poprawy
 */
 
 CApp::CApp()
