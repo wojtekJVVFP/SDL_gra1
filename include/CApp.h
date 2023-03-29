@@ -40,6 +40,7 @@ public:
     int OnExecute();
     bool OnInit();
     void OnEvent(SDL_Event* Event, class Keys_Handling* keys);
+    bool timer();
     void OnLoop();
     void OnRender();
     void OnCleanup();
