@@ -3,3 +3,4 @@
  to funkcja zwróci true, w przeciwnym razie false
 + Napisać, żeby kamera była ruchoma i poruszała się razem z graczem
 - kolizje npc z innymi obiektami oraz z graczem
+- zwiększyć bezpieczeństwo kodu poprzez ograniczenie mechanizmu przyjaźni

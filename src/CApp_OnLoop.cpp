@@ -18,10 +18,6 @@ bool CApp::timer()
     if(time_ms > DESIRED_DELAY)
     {
        old_t = clock();
-       //sum_t = 0;
-       std::cout<<time_ms<<std::endl;
-       //time_ms = 0;
-       //diff = 0;
        return true;
     }
     else
@@ -33,14 +29,8 @@ bool CApp::timer()
 
 void CApp::OnLoop()
 {
-
-
-    static int loop = 0;
-
-
     if(timer())
     {
-        n.pos_x = n.get_x() + 1;
+        n.wander(&mapa);
     }
-
 }

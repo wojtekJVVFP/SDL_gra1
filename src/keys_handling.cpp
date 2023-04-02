@@ -53,7 +53,7 @@ jak skrócić kod poniższej funkcji?
 */
 
 
-void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Map* m)
+void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Map* m, class Npc* n)
 {
     SDL_Rect temp_rect = p->player_rect;
     Int_bool t;
@@ -72,6 +72,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             {
                 //p->pos_y -= step;
                 m->move_camera(0, step);
+                n->move_entity(0, step);
             }
             else
             {
@@ -91,6 +92,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             {
                //p->pos_y += step;
                m->move_camera(0, -1*step);
+               n->move_entity(0, -1*step);
             }
 			cout<<p->get_x()<<" "<<p->get_y()<<endl;
 		}
@@ -104,6 +106,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             {
                //p->pos_x -= step;
                m->move_camera(step, 0);
+               n->move_entity(step, 0);
             }
 
             cout<<p->get_x()<<" "<<p->get_y()<<endl;
@@ -118,6 +121,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             {
                //p->pos_x += step;
                m->move_camera(-1*step, 0);
+               n->move_entity(-1*step, 0);
             }
             cout<<p->get_x()<<" "<<p->get_y()<<endl;
 		}

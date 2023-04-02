@@ -32,6 +32,7 @@ class Map
 
         friend class CApp;
         friend class Keys_Handling;
+        friend class Npc;
 
     protected:
         int object_count;   //ilość obiektów do rozmiaru p_map_rects

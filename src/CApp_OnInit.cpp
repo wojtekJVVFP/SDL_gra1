@@ -40,9 +40,18 @@ bool CApp::OnInit() {
     {
         cout<<"tekstura gracza załadowana OK"<<endl;
     }
+    else
+    {
+        return false;
+    }
+
     if(n.load_texture("bmp/npc.bmp", renderer) == true)
     {
         cout<<"tekstura gracza załadowana OK"<<endl;
+    }
+    else
+    {
+        return false;
     }
 
 

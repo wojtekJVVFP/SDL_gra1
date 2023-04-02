@@ -16,7 +16,7 @@ public:
     Keys_Handling(int u=0, int d=0, int l=0, int r=0);
 
     void key_up(SDL_KeyboardEvent* event);
-    void key_down(SDL_KeyboardEvent* event, class Player* p, class Map* m);
+    void key_down(SDL_KeyboardEvent* event, class Player* p, class Map* m, class Npc* n);
 };
 
 
