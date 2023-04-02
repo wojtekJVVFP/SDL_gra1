@@ -27,7 +27,7 @@ bool CApp::OnInit() {
     {
         return false;
     }
-
+//C:\Users\jvvfp\OneDrive\codeblocks\SDL_gra1\bmp
     if((Texture = CSurface::OnLoad("bmp/dodge2.bmp", renderer)) == NULL)
     {
         return false;
@@ -36,7 +36,7 @@ bool CApp::OnInit() {
     {
         return false;
     }
-    if(p.load_texture("bmp/dodge.bmp", renderer) == true)
+    if(p.load_texture("bmp/test.bmp", renderer) == true)
     {
         cout<<"tekstura gracza załadowana OK"<<endl;
     }

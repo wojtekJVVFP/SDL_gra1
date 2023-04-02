@@ -28,6 +28,7 @@ class Map
         void render(SDL_Renderer* renderer);
         Int_bool collide_rect(SDL_Rect r);
         bool load_object_textures(SDL_Renderer* render);
+        void move_camera(int x, int y);
 
         friend class CApp;
         friend class Keys_Handling;

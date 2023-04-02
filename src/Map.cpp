@@ -8,10 +8,27 @@ using namespace std;
 
 Map::Map()
 {//ctor
-    object_count = 1;
+    const int map_width = 1000;
+    const int map_height = 500;
+    const int border_width = 30;
+
+    #define test 1
+    #if test == 1
+    object_count = 4;
     map_rects = new Object[object_count];
-    map_rects[0].rect = {100,300,350,200};   //pierwszy obiekt na ekranie
-    map_rects[0].id = 0;
+    map_rects[0].rect = {border_width,0,map_width,border_width};   //bloki graniczne
+    map_rects[0].id = 2;
+    map_rects[1].rect = {0,0, border_width, map_height+2*border_width};
+    map_rects[1].id = 2;
+    map_rects[2].rect = {border_width, map_height+border_width, map_width, border_width};
+    map_rects[2].id = 2;
+    map_rects[3].rect = {map_width+border_width, 0, border_width, map_height+2*border_width};
+    map_rects[3].id = 2;
+    #else
+    object_count = 1;
+    #endif
+
+
 
 }
 Map::~Map()
@@ -29,6 +46,7 @@ void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
 {
     //tworzenie nowej tablicy
     Object* temp_obj = new Object[object_count+1];
+    //Object* temp2_obj = new Object[object_count+1];
 
     //przepisywanie danych z map_rects do temp_obj
     for(int i=0; i<object_count; i++)
@@ -94,14 +112,12 @@ void Map::render(SDL_Renderer* renderer)
     //cout<<"Rozmiar obiektu: "<<sizeof(SDL_Rect)<<endl;
 }
 
-
-
 /*Napisać funkcję, która sprawdza czy gracz będąc w danej pozycji koliduje z obiektem z mapy
 Wywołanie w miejscu, gdzie zmieniana jest pozycja
 
 zwraca true, gdy podany rect koliduje z mapą
 
-
+-trzeba dodać kolejny warunek, który sprawdza kolizję z obiektem mniejszym niż gracz
 */
 Int_bool Map::collide_rect(SDL_Rect r)
 {
@@ -124,6 +140,11 @@ Int_bool Map::collide_rect(SDL_Rect r)
             cout<<"kolizja x2"<<endl;
             x_collides = true;
         }
+        else if( (r.x < m.x) && (r.x+r.w > m.x+m.w) )//kolizja z lewej na x obiekt<=gracz
+        {
+            cout<<"kolizja x3"<<endl;
+            x_collides = true;
+        }
 
         if( (r.y < m.y+m.h) && (r.y > m.y) )//gracz na dole idzie do góry, kolizja na y
         {
@@ -133,6 +154,11 @@ Int_bool Map::collide_rect(SDL_Rect r)
         else if( (r.y+r.h < m.y+m.h) && (r.y+r.h > m.y) )//gracz na górze idzie do dołu, kolizja y
         {
             cout<<"kolizja y2"<<endl;
+            y_collides = true;
+        }
+        else if( (r.y < m.y) && (r.y+r.h > m.y+m.h) )//kolizja gracza mniejszego od obiektu, który dotyka od środka
+        {
+            cout<<"kolizja y3"<<endl;
             y_collides = true;
         }
 
@@ -145,6 +171,7 @@ Int_bool Map::collide_rect(SDL_Rect r)
     }
     ret.ret_bool = false;
     ret.ret_int = 0;
+
     return ret;
 }
 
@@ -179,4 +206,16 @@ bool Map::load_object_textures(SDL_Renderer* render)
     SDL_FreeSurface(Surf_Temp);
 
     return true;
+}
+
+/*
+    move_camera - moves all the objects inside map_rects by x and y dimensions
+*/
+void Map::move_camera(int x, int y)
+{
+   for(int i=0; i<object_count; i++)
+   {
+       map_rects[i].rect.x += x;
+       map_rects[i].rect.y += y;
+   }
 }

@@ -434,19 +434,19 @@
 
 1679563285 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\player.h
 
-1679767888 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\player.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\player.cpp
 	<iostream>
 	"CApp.h"
 	"Player.h"
 	"color_definition.h"
 
-1679566948 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
+1680458963 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
 	<iostream>
 	"CApp.h"
 	"Map.h"
 	"color_definition.h"
 
-1679221345 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
+1680459151 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
 
 1676813331 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\color_definition.h
 
@@ -462,10 +462,10 @@
 	"Map.h"
 	"color_definition.h"
 
-1679772790 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp.cpp
 	"CApp.h"
 
-1680108559 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\capp.h
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\capp.h
 	<SDL.h>
 	"CSurface.h"
 	"keys_handling.h"
@@ -473,35 +473,35 @@
 	"Npc.h"
 	"Map.h"
 
-1679771247 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\csurface.h
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\csurface.h
 	<SDL.h>
 
-1677868163 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\keys_handling.h
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\keys_handling.h
 	"CApp.h"
 
-1679769931 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\player.h
+1680459036 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\player.h
 	"Entity.h"
 
-1676209251 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oncleanup.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oncleanup.cpp
 	"CApp.h"
 
-1677860600 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onevent.cpp
-	"CApp.h"
-	<iostream>
-
-1679771171 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oninit.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onevent.cpp
 	"CApp.h"
 	<iostream>
 
-1680108803 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onloop.cpp
+1680458686 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oninit.cpp
+	"CApp.h"
+	<iostream>
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onloop.cpp
 	"CApp.h"
 	<time.h>
 	<iostream>
 
-1679771272 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onrender.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onrender.cpp
 	"CApp.h"
 
-1679771623 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\csurface.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\csurface.cpp
 	<iostream>
 	"CSurface.h"
 	"Player.h"
@@ -509,24 +509,106 @@
 	"Map.h"
 	"color_definition.h"
 
-1676816931 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\color_definition.h
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\color_definition.h
 
-1679767855 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\entity.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\entity.cpp
 	<iostream>
 	"CApp.h"
 	"Entity.h"
 	"color_definition.h"
 
-1679771732 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\entity.h
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\entity.h
 
-1679770321 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\keys_handling.cpp
+1680458357 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\keys_handling.cpp
 	"keys_handling.h"
 	<iostream>
 
-1679772022 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\npc.h
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\npc.h
 	"Entity.h"
 
-1679771343 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\npc.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\npc.cpp
 	"CApp.h"
 	"Npc.h"
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\capp.cpp
+	"CApp.h"
+
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\include\capp.h
+	<SDL.h>
+	"CSurface.h"
+	"keys_handling.h"
+	"Player.h"
+	"Npc.h"
+	"Map.h"
+
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\include\csurface.h
+	<SDL.h>
+
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\include\keys_handling.h
+	"CApp.h"
+
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\include\player.h
+	"Entity.h"
+
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\include\entity.h
+
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\include\npc.h
+	"Entity.h"
+
+1680458557 c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\include\map.h
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\capp_oncleanup.cpp
+	"CApp.h"
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\capp_onevent.cpp
+	"CApp.h"
+	<iostream>
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\capp_oninit.cpp
+	"CApp.h"
+	<iostream>
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\capp_onloop.cpp
+	"CApp.h"
+	<time.h>
+	<iostream>
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\capp_onrender.cpp
+	"CApp.h"
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\csurface.cpp
+	<iostream>
+	"CSurface.h"
+	"Player.h"
+	"Npc.h"
+	"Map.h"
+	"color_definition.h"
+
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\include\color_definition.h
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\entity.cpp
+	<iostream>
+	"CApp.h"
+	"Entity.h"
+	"color_definition.h"
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\npc.cpp
+	"CApp.h"
+	"Npc.h"
+
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\player.cpp
+	<iostream>
+	"CApp.h"
+	"Player.h"
+	"color_definition.h"
+
+1680458357 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\keys_handling.cpp
+	"keys_handling.h"
+	<iostream>
+
+1680458438 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra recovery 29.03.2023\sdl_gra1\src\map.cpp
+	<iostream>
+	"CApp.h"
+	"Map.h"
+	"color_definition.h"
 

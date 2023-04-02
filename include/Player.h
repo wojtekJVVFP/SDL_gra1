@@ -7,7 +7,7 @@
 class Player: public Entity //dziedziczenie publiczne po klasie Entity
 {
     public:
-        Player(int x=0, int y=0);
+        Player(int x=200, int y=200);
         ~Player();
 
         friend class Keys_Handling;

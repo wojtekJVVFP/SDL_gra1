@@ -11,6 +11,7 @@ Keys_Handling::Keys_Handling(int u, int d, int l, int r)
     right = r;
     step = 5;
 }
+
 void Keys_Handling::key_up(SDL_KeyboardEvent* event)
 {
     if (event->repeat == 0)
@@ -54,21 +55,23 @@ jak skrócić kod poniższej funkcji?
 
 void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Map* m)
 {
+    SDL_Rect temp_rect = p->player_rect;
+    Int_bool t;
+    int range = 20;  //odległość do skasowania obiektu
+
     if (event->repeat <= 1)
 	{
-		SDL_Rect temp_rect = p->player_rect;
-		Int_bool t;
-		int range = 20;  //odległość do skasowania obiektu
-
 		if (event->keysym.scancode == SDL_SCANCODE_UP)
 		{
             up = 1;
 
             temp_rect.y -= step;
+
             t = m->collide_rect(temp_rect);
             if((t.ret_bool) == false)
             {
-                p->pos_y -= step;
+                //p->pos_y -= step;
+                m->move_camera(0, step);
             }
             else
             {
@@ -76,6 +79,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             }
 
             cout<<p->get_x()<<" "<<p->get_y()<<endl;
+
 		}
 
 		if (event->keysym.scancode == SDL_SCANCODE_DOWN)
@@ -85,7 +89,8 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
 			temp_rect.y += step;
             if((m->collide_rect(temp_rect).ret_bool) == false)
             {
-               p->pos_y += step;
+               //p->pos_y += step;
+               m->move_camera(0, -1*step);
             }
 			cout<<p->get_x()<<" "<<p->get_y()<<endl;
 		}
@@ -97,7 +102,8 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             temp_rect.x -= step;
             if((m->collide_rect(temp_rect).ret_bool) == false)
             {
-               p->pos_x -= step;
+               //p->pos_x -= step;
+               m->move_camera(step, 0);
             }
 
             cout<<p->get_x()<<" "<<p->get_y()<<endl;
@@ -110,13 +116,15 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             temp_rect.x += step;
             if((m->collide_rect(temp_rect).ret_bool) == false)
             {
-               p->pos_x += step;
+               //p->pos_x += step;
+               m->move_camera(-1*step, 0);
             }
             cout<<p->get_x()<<" "<<p->get_y()<<endl;
 		}
 		if (event->keysym.scancode == SDL_SCANCODE_A)
 		{
             SDL_Rect block = {p->get_x()+p->player_width+1, p->get_y(), 100,100};
+
             if(m->collide_rect(block).ret_bool == false) //gdy nie ma kolizji z innymi obiektami
             {
                m->add_map_object(1, block);
@@ -134,9 +142,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             {
                 m->delete_map_object(t.ret_int);
             }
-
 		}
-
 	}
-
+    cout<<endl;
 }
