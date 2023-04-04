@@ -112,12 +112,9 @@ void Map::render(SDL_Renderer* renderer)
     //cout<<"Rozmiar obiektu: "<<sizeof(SDL_Rect)<<endl;
 }
 
-/*Napisać funkcję, która sprawdza czy gracz będąc w danej pozycji koliduje z obiektem z mapy
-Wywołanie w miejscu, gdzie zmieniana jest pozycja
+/*
+Funkcja sprawdza czy podany rect koliduje z mapą i zwraca true jeśli tak
 
-zwraca true, gdy podany rect koliduje z mapą
-
--trzeba dodać kolejny warunek, który sprawdza kolizję z obiektem mniejszym niż gracz
 */
 Int_bool Map::collide_rect(SDL_Rect r)
 {
@@ -132,33 +129,45 @@ Int_bool Map::collide_rect(SDL_Rect r)
 
         if( (r.x+r.w < m.x+m.w) && (r.x+r.w > m.x) )//kolizja z prawej na x gracz=>obiekt
         {
+            #if COLLIDE_TEST == 1
             cout<<"kolizja x1"<<endl;
+            #endif // COLLIDE_TEST
             x_collides = true;
         }
         else if( (r.x > m.x) && (r.x < m.x+m.w) )//kolizja z lewej na x obiekt<=gracz
         {
+            #if COLLIDE_TEST == 1
             cout<<"kolizja x2"<<endl;
+            #endif // COLLIDE_TEST
             x_collides = true;
         }
         else if( (r.x < m.x) && (r.x+r.w > m.x+m.w) )//kolizja z lewej na x obiekt<=gracz
         {
+            #if COLLIDE_TEST == 1
             cout<<"kolizja x3"<<endl;
+            #endif // COLLIDE_TEST
             x_collides = true;
         }
 
         if( (r.y < m.y+m.h) && (r.y > m.y) )//gracz na dole idzie do góry, kolizja na y
         {
+            #if COLLIDE_TEST == 1
             cout<<"kolizja y1"<<endl;
+            #endif // COLLIDE_TEST
             y_collides = true;
         }
         else if( (r.y+r.h < m.y+m.h) && (r.y+r.h > m.y) )//gracz na górze idzie do dołu, kolizja y
         {
+            #if COLLIDE_TEST == 1
             cout<<"kolizja y2"<<endl;
+            #endif // COLLIDE_TEST
             y_collides = true;
         }
         else if( (r.y < m.y) && (r.y+r.h > m.y+m.h) )//kolizja gracza mniejszego od obiektu, który dotyka od środka
         {
+            #if COLLIDE_TEST == 1
             cout<<"kolizja y3"<<endl;
+            #endif // COLLIDE_TEST
             y_collides = true;
         }
 

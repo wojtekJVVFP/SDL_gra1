@@ -13,6 +13,7 @@ class Entity
         int get_y();
         bool load_texture(const char* filename, SDL_Renderer* render);
         void render(SDL_Renderer* renderer);
+        bool collide_rect(SDL_Rect r);
 
 
     protected:

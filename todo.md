@@ -4,3 +4,7 @@
 + Napisać, żeby kamera była ruchoma i poruszała się razem z graczem
 - kolizje npc z innymi obiektami oraz z graczem
 - zwiększyć bezpieczeństwo kodu poprzez ograniczenie mechanizmu przyjaźni
+- dodać funkcję do realistycznych zderzeń
+- liczenie punktów przy kontakcie gracza z npc
+
+

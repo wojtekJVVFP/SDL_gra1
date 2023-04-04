@@ -21,7 +21,7 @@ Npc::~Npc()
 movement of npces
 run inside time controlled loop
 */
-void Npc::wander(class Map* m)
+void Npc::wander(class Map* m, class Player* p)
 {
     SDL_Rect temp = player_rect;
     static int dir = 1;
@@ -29,7 +29,7 @@ void Npc::wander(class Map* m)
     temp.x = get_x() + dir;
     temp.y = get_y() + dir;
 
-    if(!m->collide_rect(temp).ret_bool)
+    if((!m->collide_rect(temp).ret_bool) && (!p->collide_rect(temp)) )
     {
         move_entity(dir, dir);
     }

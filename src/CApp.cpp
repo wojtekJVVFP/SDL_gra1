@@ -26,6 +26,8 @@ po przekazaniu obiektu Player przez wskaźnik zadziałało
 */
 
 CApp::CApp()
+: p(Player(500,100))    //initialization of p member of a class, it don't need to be a default constructor
+
 {
     Surf_Display = NULL;
     Surf_Test = NULL;

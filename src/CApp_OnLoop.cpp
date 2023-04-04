@@ -31,6 +31,6 @@ void CApp::OnLoop()
 {
     if(timer())
     {
-        n.wander(&mapa);
+        n.wander(&mapa, &p);
     }
 }

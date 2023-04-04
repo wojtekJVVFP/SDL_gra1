@@ -11,6 +11,8 @@
 #define WIDTH 800
 #define HEIGHT 600
 
+#define COLLIDE_TEST 0
+
 /*
 Jak dołączyć dodatkową pomocniczą klasę do obsługi klawiszy?
 Ma być dostęp do pos_x i pos_y

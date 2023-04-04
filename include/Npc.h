@@ -8,7 +8,7 @@ class Npc: public Entity
     public:
         Npc(int x=100, int y=100);
         ~Npc();
-        void wander(class Map* m);
+        void wander(class Map* m, class Player* p);
         void move_entity(int x, int y);
 
         friend class CApp;

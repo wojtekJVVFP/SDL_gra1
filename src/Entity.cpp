@@ -79,3 +79,66 @@ void Entity::render(SDL_Renderer* renderer)
 
     SDL_RenderCopy(renderer, texture, NULL, &player_rect);
 }
+
+/*
+Funkcja sprawdza czy podany rect koliduje z mapą i zwraca true jeśli tak
+
+*/
+bool Entity::collide_rect(SDL_Rect r)
+{
+
+    SDL_Rect m = player_rect;
+
+    bool x_collides = false;
+    bool y_collides = false;
+
+    if( (r.x+r.w < m.x+m.w) && (r.x+r.w > m.x) )//kolizja z prawej na x gracz=>obiekt
+    {
+        #if COLLIDE_TEST == 1
+        cout<<"kolizja x1"<<endl;
+        #endif
+        x_collides = true;
+    }
+    else if( (r.x > m.x) && (r.x < m.x+m.w) )//kolizja z lewej na x obiekt<=gracz
+    {
+        #if COLLIDE_TEST == 1
+        cout<<"kolizja x2"<<endl;
+        #endif
+        x_collides = true;
+    }
+    else if( (r.x < m.x) && (r.x+r.w > m.x+m.w) )//kolizja z lewej na x obiekt<=gracz
+    {
+        #if COLLIDE_TEST == 1
+        cout<<"kolizja x3"<<endl;
+        #endif
+        x_collides = true;
+    }
+
+    if( (r.y < m.y+m.h) && (r.y > m.y) )//gracz na dole idzie do góry, kolizja na y
+    {
+        #if COLLIDE_TEST == 1
+        cout<<"kolizja y1"<<endl;
+        #endif
+        y_collides = true;
+    }
+    else if( (r.y+r.h < m.y+m.h) && (r.y+r.h > m.y) )//gracz na górze idzie do dołu, kolizja y
+    {
+        #if COLLIDE_TEST == 1
+        cout<<"kolizja y2"<<endl;
+        #endif
+        y_collides = true;
+    }
+    else if( (r.y < m.y) && (r.y+r.h > m.y+m.h) )//kolizja gracza mniejszego od obiektu, który dotyka od środka
+    {
+        #if COLLIDE_TEST == 1
+        cout<<"kolizja y3"<<endl;
+        #endif
+        y_collides = true;
+    }
+
+    if(x_collides && y_collides)
+    {
+        return true;
+    }
+    return false;
+}
