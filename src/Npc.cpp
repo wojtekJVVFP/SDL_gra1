@@ -24,18 +24,21 @@ run inside time controlled loop
 void Npc::wander(class Map* m, class Player* p)
 {
     SDL_Rect temp = player_rect;
-    static int dir = 1;
+    static int dx = 1;
+    static int dy = 1;
 
-    temp.x = get_x() + dir;
-    temp.y = get_y() + dir;
+    temp.x = get_x() + dx;
+    temp.y = get_y() + dy;
 
     if((!m->collide_rect(temp).ret_bool) && (!p->collide_rect(temp)) )
     {
-        move_entity(dir, dir);
+        move_entity(dx, dy);
+        calc_traj(dx, dy);
     }
     else
     {
-        dir *= -1;
+        dx *= -1;
+        dy *= -1;
     }
 
 

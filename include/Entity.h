@@ -14,6 +14,8 @@ class Entity
         bool load_texture(const char* filename, SDL_Renderer* render);
         void render(SDL_Renderer* renderer);
         bool collide_rect(SDL_Rect r);
+        void calc_traj(int dx, int dy);
+        void draw_traj(SDL_Renderer* renderer);
 
 
     protected:
@@ -23,6 +25,7 @@ class Entity
         int player_width;
         int player_height;
         SDL_Rect player_rect;
+        float a,b;  //a, b coefficients of straight line y=ax+b
     private:
 };
 

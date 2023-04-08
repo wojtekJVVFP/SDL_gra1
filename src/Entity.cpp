@@ -142,3 +142,29 @@ bool Entity::collide_rect(SDL_Rect r)
     }
     return false;
 }
+
+
+/*
+P1 = (pos_x, pos_y)
+P2 = (pos_x+dx, pos_y+dy)
+
+*/
+void Entity::calc_traj(int dx, int dy)
+{
+    a = (float) dy / dx;
+    b = (float) pos_y - a * (float)pos_x;
+}
+void Entity::draw_traj(SDL_Renderer* renderer)
+{
+    SDL_SetRenderDrawColor(renderer, BLACK, 255);
+    int x1, y1, x2, y2;
+
+    x1 = pos_x - 100;
+    y1 = (int) (a*x1 + b);
+
+    x2 = pos_x + 100;
+    y2 = (int) (a*x2 + b);
+
+
+    SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+}

@@ -6,6 +6,26 @@
 using namespace std;
 
 
+/**< Point class */
+Object::Object()
+{
+    rect = {0, 0, 10, 10};  //init values
+    id = 0;
+}
+Object::~Object()
+{
+    //dtor
+}
+Object::calc_points()
+{
+    points[0] = {rect.x, rect.y+rect.h};
+    points[1] = {rect.x+rect.w, rect.y+rect.h};
+    points[2] = {rect.x+rect.w, rect.y};
+    points[3] = {rect.x, rect.y};
+}
+
+
+
 Map::Map()
 {//ctor
     const int map_width = 1000;
@@ -55,6 +75,7 @@ void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
     }
     temp_obj[object_count].rect = obj_rect;//{obj_rect.x, obj_rect.y, obj_rect.w, obj_rect.h};
     temp_obj[object_count].id = obj_id;
+    temp_obj[object_count].calc_points();
 
     delete[] map_rects;
     map_rects = temp_obj;   //temp_obj nie będzie tu kasowane, bo pamięć zostanie zwolniona w destruktorze klasy

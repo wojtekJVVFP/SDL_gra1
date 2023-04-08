@@ -7,10 +7,30 @@ struct Int_bool //struktura używana do zwracania wartości przez funkcję do ba
     bool ret_bool;
 };
 
-struct Object
+struct Point
 {
+    int x;
+    int y;
+};
+
+class Object
+{
+public:
+    Object();
+    ~Object();
+    friend class Map;
+    calc_points();
+private:
     int id;
     SDL_Rect rect;
+    Point points[4];    //storing rect points
+    /*
+        3 *     2 *
+
+
+        0 *     1 *
+
+    */
 };
 
 /*
