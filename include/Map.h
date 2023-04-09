@@ -24,13 +24,13 @@ private:
     int id;
     SDL_Rect rect;
     Point points[4];    //storing rect points
-    /*
-        3 *     2 *
+    float a[4];         //a and b coefficients from straight formula y = a*x + b
+    float b[4];
+    /*  3 *     2 *
 
 
-        0 *     1 *
+        0 *     1 * */
 
-    */
 };
 
 /*
@@ -49,6 +49,7 @@ class Map
         Int_bool collide_rect(SDL_Rect r);
         bool load_object_textures(SDL_Renderer* render);
         void move_camera(int x, int y);
+        void draw_traj(SDL_Renderer* renderer);
 
         friend class CApp;
         friend class Keys_Handling;

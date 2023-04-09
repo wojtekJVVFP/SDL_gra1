@@ -47,6 +47,7 @@ bool CSurface::OnDraw(SDL_Texture* texture, SDL_Renderer* renderer, class Player
     SDL_RenderClear(renderer);
     SDL_SetRenderDrawColor(renderer, BLACK, 255);
     m->render(renderer);  //renderowanie obiektów mapy
+    //m->draw_traj(renderer);
     p->render(renderer);    //renderowanie gracza
     n->render(renderer);
     n->draw_traj(renderer);

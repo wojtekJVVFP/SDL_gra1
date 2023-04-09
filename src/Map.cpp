@@ -18,13 +18,36 @@ Object::~Object()
 }
 Object::calc_points()
 {
+    int dx,dy;
+
     points[0] = {rect.x, rect.y+rect.h};
     points[1] = {rect.x+rect.w, rect.y+rect.h};
     points[2] = {rect.x+rect.w, rect.y};
     points[3] = {rect.x, rect.y};
+
+    for(int i=0; i<3; i++)
+    {
+        if((points[i+1].x - points[i].x) != 0)   //if dividing by non zero value
+        {
+            a[i] = (float)(points[i+1].y - points[i].y )/ (points[i+1].x - points[i].x);
+        }
+        else
+        {
+            a[i] = 1000;   //let's assume this as straight vertical line
+        }
+        b[i] = (float) points[i].y - a[i] * (float)points[i].x;
+    }
+
+    if((points[0].x - points[3].x) != 0)   //if dividing by non zero value
+    {
+        a[3] = (float)(points[0].y - points[3].y )/ (points[0].x - points[3].x);
+    }
+    else
+    {
+        a[3] = 1000;   //let's assume this as straight vertical line
+    }
+    b[3] = (float) points[3].y - a[3] * (float)points[3].x;
 }
-
-
 
 Map::Map()
 {//ctor
@@ -243,9 +266,37 @@ bool Map::load_object_textures(SDL_Renderer* render)
 */
 void Map::move_camera(int x, int y)
 {
-   for(int i=0; i<object_count; i++)
-   {
-       map_rects[i].rect.x += x;
-       map_rects[i].rect.y += y;
+    for(int i=0; i<object_count; i++)
+    {
+        map_rects[i].rect.x += x;
+        map_rects[i].rect.y += y;
+
+        for(int j=0; j<4; j++)
+        {
+            map_rects[i].points[j].x += x;
+            map_rects[i].points[j].y += y;
+        }
+        map_rects[i].calc_points();
    }
+}
+
+void Map::draw_traj(SDL_Renderer* renderer)
+{
+    SDL_SetRenderDrawColor(renderer, BLACK, 255);
+    int x1, y1, x2, y2;
+    float a,b;
+
+
+    for(int i=0; i<object_count; i++)
+    {
+        for(int j=0; j<4; j++)
+        {
+            x1 = map_rects[i].points[j].x - 100;
+            y1 = (int) (map_rects[i].a[j]*x1 + map_rects[i].b[j]);
+
+            x2 = map_rects[i].points[j].x + 100;
+            y2 = (int) (map_rects[i].a[j]*x2 + map_rects[i].b[j]);
+            SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+        }
+    }
 }

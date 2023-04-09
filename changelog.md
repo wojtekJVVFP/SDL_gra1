@@ -11,4 +11,6 @@
 - 08.04.2023
     - working on collisions with objects
     -- calculating straight lines around the objects - in progress
-
+- 09.04.2023
+    -- calculating straights of the objects Object->calc_points
+    -- function to check the results in map class draw_traj()

@@ -151,7 +151,14 @@ P2 = (pos_x+dx, pos_y+dy)
 */
 void Entity::calc_traj(int dx, int dy)
 {
-    a = (float) dy / dx;
+    if(dx!=0)   //if dividing by non zero value
+    {
+        a = (float) dy / dx;
+    }
+    else
+    {
+        a = 1000;   //let's assume this as straight vertical line
+    }
     b = (float) pos_y - a * (float)pos_x;
 }
 void Entity::draw_traj(SDL_Renderer* renderer)

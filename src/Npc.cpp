@@ -24,7 +24,7 @@ run inside time controlled loop
 void Npc::wander(class Map* m, class Player* p)
 {
     SDL_Rect temp = player_rect;
-    static int dx = 1;
+    static int dx = 0;
     static int dy = 1;
 
     temp.x = get_x() + dx;
