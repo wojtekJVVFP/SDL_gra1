@@ -15,6 +15,7 @@ class Entity
         void render(SDL_Renderer* renderer);
         bool collide_rect(SDL_Rect r);
         void calc_traj(int dx, int dy);
+        void calc_collision(class Map* m, int object_no);
         void draw_traj(SDL_Renderer* renderer);
 
 

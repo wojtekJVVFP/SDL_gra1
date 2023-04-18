@@ -98,7 +98,7 @@ void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
     }
     temp_obj[object_count].rect = obj_rect;//{obj_rect.x, obj_rect.y, obj_rect.w, obj_rect.h};
     temp_obj[object_count].id = obj_id;
-    temp_obj[object_count].calc_points();
+    temp_obj[object_count].calc_points();   //calculating new points
 
     delete[] map_rects;
     map_rects = temp_obj;   //temp_obj nie będzie tu kasowane, bo pamięć zostanie zwolniona w destruktorze klasy

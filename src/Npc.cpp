@@ -37,6 +37,7 @@ void Npc::wander(class Map* m, class Player* p)
     }
     else
     {
+        calc_collision(m, ret.)
         dx *= -1;
         dy *= -1;
     }

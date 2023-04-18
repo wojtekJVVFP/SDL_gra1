@@ -6,10 +6,10 @@
 - zwiększyć bezpieczeństwo kodu poprzez ograniczenie mechanizmu przyjaźni
 
 - dodać funkcję do realistycznych zderzeń
--- dodanie punktów do obiektów
--- generowanie prostych wokół obiektów na bazie obliczonych punktów
--- obliczanie odległości npc do tych prostych na bazie wyznaczonych wzorów
-
+-+ dodanie punktów do obiektów
+-+ generowanie prostych wokół obiektów na bazie obliczonych punktów
+--test obliczanie odległości npc do tych prostych na bazie wyznaczonych wzorów
+-- obliczanie punktu frontowego obiektu z uwzględnieniem jego kierunku poruszania się
 
 
 - liczenie punktów przy kontakcie gracza z npc

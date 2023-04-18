@@ -14,3 +14,8 @@
 - 09.04.2023
     -- calculating straights of the objects Object->calc_points
     -- function to check the results in map class draw_traj()
+- 15.04.2023
+    -- working on void Entity::calc_collision(class Map* m)
+- 18.04.2023
+    -- added points_distance func in geometry.c
+    -- in progress: testing of new functions

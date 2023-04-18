@@ -18,8 +18,9 @@ class Object
 public:
     Object();
     ~Object();
-    friend class Map;
     calc_points();
+    friend class Map;
+    friend class Entity;
 private:
     int id;
     SDL_Rect rect;
@@ -54,6 +55,7 @@ class Map
         friend class CApp;
         friend class Keys_Handling;
         friend class Npc;
+        friend class Entity;
 
     protected:
         int object_count;   //ilość obiektów do rozmiaru p_map_rects

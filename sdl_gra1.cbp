@@ -56,6 +56,7 @@
 		<Unit filename="include/Npc.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/color_definition.h" />
+		<Unit filename="include/geometry.h" />
 		<Unit filename="include/keys_handling.h" />
 		<Unit filename="src/CApp.cpp" />
 		<Unit filename="src/CApp_OnCleanup.cpp" />
@@ -68,6 +69,7 @@
 		<Unit filename="src/Map.cpp" />
 		<Unit filename="src/Npc.cpp" />
 		<Unit filename="src/Player.cpp" />
+		<Unit filename="src/geometry.cpp" />
 		<Unit filename="src/keys_handling.cpp" />
 		<Unit filename="todo.md" />
 		<Extensions>

@@ -2,6 +2,7 @@
 #include "CApp.h"
 #include "Entity.h"
 #include "color_definition.h"
+#include "geometry.h"
 
 using namespace std;
 
@@ -161,6 +162,33 @@ void Entity::calc_traj(int dx, int dy)
     }
     b = (float) pos_y - a * (float)pos_x;
 }
+
+
+/*
+calc_collision
+- calculates which map objects collide with entity using straight line of entity trajectory and object straight lines
+- calculating common point of straights and checking if this point belong to object
+
+inputs:
+-
+
+uses a[4] and b[4] and points[4] from map.h
+uses a,b and
+*/
+void Entity::calc_collision(class Map* m, int object_no)
+{
+    int xp, yp;
+    int distances[4];   //distances from 4 object lines
+
+    for(int i=0; i < 4; i++)
+    {
+        xp = (int)((b-(m->map_rects[object_no].b[i]))/(m->map_rects[object_no].a[i]-a)); //calculating common point x and y
+        yp = (int)(a*xp+b);
+
+        cout<<"Punkt policzony: "<<xp<<" "<<yp<<"Odl od linii: "<<points_distance(xp, yp, pos_x, pos_y)<<endl;//checking if point belongs to the line
+    }
+}
+
 void Entity::draw_traj(SDL_Renderer* renderer)
 {
     SDL_SetRenderDrawColor(renderer, BLACK, 255);
@@ -175,3 +203,4 @@ void Entity::draw_traj(SDL_Renderer* renderer)
 
     SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
 }
+
