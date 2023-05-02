@@ -87,7 +87,6 @@ Funkcja sprawdza czy podany rect koliduje z mapą i zwraca true jeśli tak
 */
 bool Entity::collide_rect(SDL_Rect r)
 {
-
     SDL_Rect m = player_rect;
 
     bool x_collides = false;
@@ -185,7 +184,7 @@ void Entity::calc_collision(class Map* m, int object_no)
         xp = (int)((b-(m->map_rects[object_no].b[i]))/(m->map_rects[object_no].a[i]-a)); //calculating common point x and y
         yp = (int)(a*xp+b);
 
-        cout<<"Punkt policzony: "<<xp<<" "<<yp<<"Odl od linii: "<<points_distance(xp, yp, pos_x, pos_y)<<endl;//checking if point belongs to the line
+        cout<<i<<": "<<"Punkt policzony: "<<xp<<" "<<yp<<"Odl od linii: "<<points_distance(xp, yp, pos_x, pos_y)<<endl;//checking if point belongs to the line
     }
 }
 

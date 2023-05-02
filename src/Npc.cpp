@@ -27,17 +27,20 @@ void Npc::wander(class Map* m, class Player* p)
     static int dx = 0;
     static int dy = 1;
 
-    temp.x = get_x() + dx;
-    temp.y = get_y() + dy;
+    Int_bool ret;
 
-    if((!m->collide_rect(temp).ret_bool) && (!p->collide_rect(temp)) )
+    temp.x = get_x() + dx;
+    temp.y = get_y() + dy;  //creating rect to check collision
+
+    ret = m->collide_rect(temp);    //checking collision with map objects
+    if((!ret.ret_bool) && (!p->collide_rect(temp)) )
     {
         move_entity(dx, dy);
         calc_traj(dx, dy);
     }
     else
     {
-        calc_collision(m, ret.)
+        calc_collision(m, ret.ret_int);
         dx *= -1;
         dy *= -1;
     }

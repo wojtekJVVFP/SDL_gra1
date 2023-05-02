@@ -10,8 +10,11 @@
 -+ generowanie prostych wokół obiektów na bazie obliczonych punktów
 --test obliczanie odległości npc do tych prostych na bazie wyznaczonych wzorów
 -- obliczanie punktu frontowego obiektu z uwzględnieniem jego kierunku poruszania się
+--
 
 
 - liczenie punktów przy kontakcie gracza z npc
-- dodać brakujące tekstury
++ dodać brakujące tekstury
+- dodać właściwość destroyable do klasy obiekt i znaleźć miejsce, w którym będą zdefiniowane właściowści różnych obiektów, np. żeby wystarczyło podać id obiektu, żeby przypisały się
+ jego właściwości
 

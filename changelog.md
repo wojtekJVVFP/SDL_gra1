@@ -19,3 +19,5 @@
 - 18.04.2023
     -- added points_distance func in geometry.c
     -- in progress: testing of new functions
+- 02.05.2023
+    --added new texture for border object id = 2

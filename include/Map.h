@@ -18,7 +18,7 @@ class Object
 public:
     Object();
     ~Object();
-    calc_points();
+    void calc_points();
     friend class Map;
     friend class Entity;
 private:
@@ -61,6 +61,7 @@ class Map
         int object_count;   //ilość obiektów do rozmiaru p_map_rects
         Object* map_rects;
         SDL_Texture* stone_texture;
+        SDL_Texture* border_texture;
 
     private:
 };

@@ -16,7 +16,7 @@ Object::~Object()
 {
     //dtor
 }
-Object::calc_points()
+void Object::calc_points()
 {
     int dx,dy;
 
@@ -77,6 +77,8 @@ Map::Map()
 Map::~Map()
 {//dtor
     delete[] map_rects;//dtor
+    SDL_DestroyTexture(stone_texture);
+    SDL_DestroyTexture(border_texture);
 }
 
 /*
@@ -147,6 +149,9 @@ void Map::render(SDL_Renderer* renderer)
             break;
         case 1:
             SDL_RenderCopy(renderer, stone_texture, NULL, &map_rects[i].rect);
+            break;
+        case 2:
+            SDL_RenderCopy(renderer, border_texture, NULL, &map_rects[i].rect);
             break;
         default:
             break;
@@ -231,32 +236,30 @@ Int_bool Map::collide_rect(SDL_Rect r)
 bool Map::load_object_textures(SDL_Renderer* render)
 {
     SDL_Surface* Surf_Temp = NULL;
-    const char* filename = "bmp/stone.bmp";
+    const char* filename[2] = {"bmp/stone.bmp", "bmp/border.bmp"};
+    SDL_Texture* textures[2] = {NULL, NULL};
+    int* a[2];
+    int b,c;
 
-    if( (Surf_Temp = SDL_LoadBMP(filename) ) == NULL)
+    for(int i=0; i<2; i++)
     {
-        cout<<"błąd";
-        return false;
+        if( (Surf_Temp = SDL_LoadBMP(filename[i]) ) == NULL)
+        {
+            cout<<"błąd";
+            return false;
+        }
+
+        if((textures[i] = SDL_CreateTextureFromSurface(render, Surf_Temp)) == NULL)
+        {
+            cout<<"błąd";
+            return false;
+        }
+
+        SDL_FreeSurface(Surf_Temp);
     }
 
-    //player_height = Surf_Temp->h;
-    //player_width = Surf_Temp->w;
-   // player_rect = Surf_Temp->clip_rect;
-
-
-    if((stone_texture = SDL_CreateTextureFromSurface(render, Surf_Temp)) == NULL)
-    {
-        cout<<"błąd";
-        return false;
-    }
-    //Uint8 a=255;
-    //SDL_SetTextureAlphaMod(player_texture,a);
-
-
-    //initialising player dimension
-    //player_height = SDL_Get
-
-    SDL_FreeSurface(Surf_Temp);
+    stone_texture = textures[0];
+    border_texture = textures[1];
 
     return true;
 }
