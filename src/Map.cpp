@@ -11,6 +11,7 @@ Object::Object()
 {
     rect = {0, 0, 10, 10};  //init values
     id = 0;
+    destroyable = true;
 }
 Object::~Object()
 {
@@ -48,6 +49,10 @@ void Object::calc_points()
     }
     b[3] = (float) points[3].y - a[3] * (float)points[3].x;
 }
+bool Object::is_destroyable()
+{
+    return destroyable;
+}
 
 Map::Map()
 {//ctor
@@ -57,16 +62,25 @@ Map::Map()
 
     #define test 1
     #if test == 1
-    object_count = 4;
+
+    SDL_Rect temp;
+    object_count = 1;
     map_rects = new Object[object_count];
-    map_rects[0].rect = {border_width,0,map_width,border_width};   //bloki graniczne
-    map_rects[0].id = 2;
-    map_rects[1].rect = {0,0, border_width, map_height+2*border_width};
-    map_rects[1].id = 2;
-    map_rects[2].rect = {border_width, map_height+border_width, map_width, border_width};
-    map_rects[2].id = 2;
-    map_rects[3].rect = {map_width+border_width, 0, border_width, map_height+2*border_width};
-    map_rects[3].id = 2;
+    map_rects[0].rect = {0,0,2,2};
+    map_rects[0].id = 0;
+
+    temp = {border_width,0,map_width,border_width};
+    add_map_object(2, temp);
+
+    temp = {0,0, border_width, map_height+2*border_width};
+    add_map_object(2, temp);
+
+    temp = {border_width, map_height+border_width, map_width, border_width};
+    add_map_object(2, temp);
+
+    temp = {map_width+border_width, 0, border_width, map_height+2*border_width};
+    add_map_object(2, temp);
+
     #else
     object_count = 1;
     #endif
@@ -100,6 +114,13 @@ void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
     }
     temp_obj[object_count].rect = obj_rect;//{obj_rect.x, obj_rect.y, obj_rect.w, obj_rect.h};
     temp_obj[object_count].id = obj_id;
+
+    //writing properties to the object
+    if(obj_id == 2)
+    {
+        temp_obj[object_count].destroyable = false;
+    }
+
     temp_obj[object_count].calc_points();   //calculating new points
 
     delete[] map_rects;

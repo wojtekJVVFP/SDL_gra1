@@ -15,6 +15,6 @@
 
 - liczenie punktów przy kontakcie gracza z npc
 + dodać brakujące tekstury
-- dodać właściwość destroyable do klasy obiekt i znaleźć miejsce, w którym będą zdefiniowane właściowści różnych obiektów, np. żeby wystarczyło podać id obiektu, żeby przypisały się
- jego właściwości
++ dodać właściwość destroyable do klasy obiekt i znaleźć miejsce, w którym będą zdefiniowane właściowści różnych obiektów, np. żeby wystarczyło podać id obiektu, żeby przypisały się
+ jego właściwości. Dodawanie właściwości obiektu w zależności od id można wykonać podczas jego dodawania we funkcji add_map_object
 

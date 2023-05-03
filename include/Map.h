@@ -19,10 +19,12 @@ public:
     Object();
     ~Object();
     void calc_points();
+    bool is_destroyable();
     friend class Map;
     friend class Entity;
 private:
     int id;
+    bool destroyable;
     SDL_Rect rect;
     Point points[4];    //storing rect points
     float a[4];         //a and b coefficients from straight formula y = a*x + b
