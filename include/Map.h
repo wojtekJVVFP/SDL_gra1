@@ -15,14 +15,6 @@ struct Point
 
 class Object
 {
-public:
-    Object();
-    ~Object();
-    void calc_points();
-    bool is_destroyable();
-    friend class Map;
-    friend class Entity;
-private:
     int id;
     bool destroyable;
     SDL_Rect rect;
@@ -34,6 +26,18 @@ private:
 
         0 *     1 * */
 
+public:
+    Object();
+    ~Object();
+    void calc_points();
+    bool getDestroyable();
+    void setDestroyable(bool a);
+    SDL_Rect getRect();
+    void setRect(SDL_Rect a);
+    void setId(int a);
+    int getId();
+    //friend class Map;
+    friend class Entity;
 };
 
 /*

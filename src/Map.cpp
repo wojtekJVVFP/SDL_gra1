@@ -49,9 +49,31 @@ void Object::calc_points()
     }
     b[3] = (float) points[3].y - a[3] * (float)points[3].x;
 }
-bool Object::is_destroyable()
+bool Object::getDestroyable()
 {
     return destroyable;
+}
+
+void Object::setDestroyable(bool a)
+{
+    destroyable = a;
+}
+
+SDL_Rect Object::getRect()
+{
+    return rect;
+}
+void Object::setRect(SDL_Rect a)
+{
+    rect = a;
+}
+void Object::setId(int a)
+{
+    id = a;
+}
+int Object::getId()
+{
+    return id;
 }
 
 Map::Map()
@@ -66,8 +88,9 @@ Map::Map()
     SDL_Rect temp;
     object_count = 1;
     map_rects = new Object[object_count];
-    map_rects[0].rect = {0,0,2,2};
-    map_rects[0].id = 0;
+
+    map_rects[0].setRect({0,0,2,2});
+    map_rects[0].setId(0);
 
     temp = {border_width,0,map_width,border_width};
     add_map_object(2, temp);
@@ -112,13 +135,13 @@ void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
     {
        temp_obj[i] = map_rects[i];
     }
-    temp_obj[object_count].rect = obj_rect;//{obj_rect.x, obj_rect.y, obj_rect.w, obj_rect.h};
-    temp_obj[object_count].id = obj_id;
+    temp_obj[object_count].setRect(obj_rect);
+    temp_obj[object_count].setId(obj_id);
 
     //writing properties to the object
     if(obj_id == 2)
     {
-        temp_obj[object_count].destroyable = false;
+        temp_obj[object_count].setDestroyable(false);
     }
 
     temp_obj[object_count].calc_points();   //calculating new points
@@ -160,19 +183,22 @@ void Map::render(SDL_Renderer* renderer)
 {
     SDL_SetRenderDrawColor(renderer, BLACK, 255);
     //SDL_RenderDrawLine(renderer, 100, 200, 300, 200);
+    SDL_Rect tempRect;
 
     for(int i=0; i<object_count; i++)
     {
-        SDL_RenderDrawRect(renderer, &map_rects[i].rect);
-        switch(map_rects[i].id)
+        tempRect = map_rects[i].getRect();
+
+        SDL_RenderDrawRect(renderer, &tempRect);
+        switch(map_rects[i].getId())
         {
         case 0:
             break;
         case 1:
-            SDL_RenderCopy(renderer, stone_texture, NULL, &map_rects[i].rect);
+            SDL_RenderCopy(renderer, stone_texture, NULL, &tempRect);
             break;
         case 2:
-            SDL_RenderCopy(renderer, border_texture, NULL, &map_rects[i].rect);
+            SDL_RenderCopy(renderer, border_texture, NULL, &tempRect);
             break;
         default:
             break;
@@ -192,7 +218,7 @@ Int_bool Map::collide_rect(SDL_Rect r)
 
     for(int i=0; i<object_count; i++)
     {
-        SDL_Rect m = map_rects[i].rect;
+        SDL_Rect m = map_rects[i].getRect();
 
         bool x_collides = false;
         bool y_collides = false;
@@ -256,13 +282,14 @@ Int_bool Map::collide_rect(SDL_Rect r)
 
 bool Map::load_object_textures(SDL_Renderer* render)
 {
+    #define NO_OF_BLOCKS 2
     SDL_Surface* Surf_Temp = NULL;
-    const char* filename[2] = {"bmp/stone.bmp", "bmp/border.bmp"};
-    SDL_Texture* textures[2] = {NULL, NULL};
+    const char* filename[NO_OF_BLOCKS] = {"bmp/stone.bmp", "bmp/border.bmp"};//Give the location to block textures
+    SDL_Texture* textures[NO_OF_BLOCKS] = {NULL, NULL};
     int* a[2];
     int b,c;
 
-    for(int i=0; i<2; i++)
+    for(int i=0; i<NO_OF_BLOCKS; i++)
     {
         if( (Surf_Temp = SDL_LoadBMP(filename[i]) ) == NULL)
         {
@@ -292,8 +319,11 @@ void Map::move_camera(int x, int y)
 {
     for(int i=0; i<object_count; i++)
     {
-        map_rects[i].rect.x += x;
-        map_rects[i].rect.y += y;
+        SDL_Rect tempRect = map_rects[i].getRect();
+        tempRect.x += x;
+        tempRect.y += y;
+
+        map_rects[i].setRect(tempRect);
 
         for(int j=0; j<4; j++)
         {

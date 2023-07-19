@@ -144,7 +144,7 @@ void Keys_Handling::key_down(SDL_KeyboardEvent* event, class Player* p, class Ma
             t = m->collide_rect(temp_rect);
             if((t.ret_bool) == true)
             {
-                if(m->map_rects[t.ret_int].is_destroyable() == true)
+                if(m->map_rects[t.ret_int].getDestroyable() == true)
                 m->delete_map_object(t.ret_int);
             }
 		}

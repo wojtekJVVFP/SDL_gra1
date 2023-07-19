@@ -29,10 +29,12 @@ CApp::CApp()
 : p(Player(500,100))    //initialization of p member of a class, it don't need to be a default constructor
 
 {
-    Surf_Display = NULL;
+    Surf_Display = NULL;    //initializing pointers
     Surf_Test = NULL;
     Window = NULL;
     renderer = NULL;
+    Texture_Display = NULL;
+    Texture = NULL;
     Running = true;
 }
 

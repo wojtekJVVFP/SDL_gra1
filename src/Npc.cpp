@@ -13,7 +13,6 @@ Npc::Npc(int x, int y)
 Npc::~Npc()
 {
     //dtor
-    SDL_DestroyTexture(texture);
 }
 
 

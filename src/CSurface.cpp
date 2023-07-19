@@ -42,7 +42,6 @@ bool CSurface::OnDraw(SDL_Texture* texture, SDL_Renderer* renderer, class Player
 
     //cout<<p1.get_x()<<" "<<p2.get_x()<<endl;
 
-
     SDL_SetRenderDrawColor(renderer, WHITE, 255);
     SDL_RenderClear(renderer);
     SDL_SetRenderDrawColor(renderer, BLACK, 255);
@@ -60,8 +59,6 @@ bool CSurface::OnDraw(SDL_Texture* texture, SDL_Renderer* renderer, class Player
     //p.load_player_texture("bmp/dodge.bmp", renderer);
 
     SDL_RenderPresent(renderer);
-
-
 
     return true;
 }

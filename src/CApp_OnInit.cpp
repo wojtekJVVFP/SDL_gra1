@@ -60,7 +60,5 @@ bool CApp::OnInit() {
         cout<<"tekstury obiektów załadowane OK"<<endl;
     }
 
-
-
     return true;
 }

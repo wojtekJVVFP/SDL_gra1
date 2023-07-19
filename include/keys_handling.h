@@ -5,14 +5,12 @@
 
 class Keys_Handling
 {
-private:
-
-public:
     int up;
     int down;
     int left;
     int right;
     int step;
+public:
     Keys_Handling(int u=0, int d=0, int l=0, int r=0);
 
     void key_up(SDL_KeyboardEvent* event);
