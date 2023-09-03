@@ -36,7 +36,7 @@ public:
     void setRect(SDL_Rect a);
     void setId(int a);
     int getId();
-    //friend class Map;
+    friend class Map;
     friend class Entity;
 };
 

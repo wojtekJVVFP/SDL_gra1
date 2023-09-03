@@ -284,7 +284,7 @@ bool Map::load_object_textures(SDL_Renderer* render)
 {
     #define NO_OF_BLOCKS 2
     SDL_Surface* Surf_Temp = NULL;
-    const char* filename[NO_OF_BLOCKS] = {"bmp/stone.bmp", "bmp/border.bmp"};//Give the location to block textures
+    const char* filename[NO_OF_BLOCKS] = {"bmp/stone.bmp", "bmp/border.bmp"};//Give the file location to block textures
     SDL_Texture* textures[NO_OF_BLOCKS] = {NULL, NULL};
     int* a[2];
     int b,c;
