@@ -184,7 +184,10 @@ void Entity::calc_collision(class Map* m, int object_no)
         xp = (int)((b-(m->map_rects[object_no].b[i]))/(m->map_rects[object_no].a[i]-a)); //calculating common point x and y
         yp = (int)(a*xp+b);
 
-        cout<<i<<": "<<"Punkt policzony: "<<xp<<" "<<yp<<"Odl od linii: "<<points_distance(xp, yp, pos_x, pos_y)<<endl;//checking if point belongs to the line
+        p_col[i] = {xp, yp};
+
+        cout<<i<<": "<<"Punkt policzony: "<<xp<<" "<<yp<<" Odl od linii: "<<points_distance(xp, yp, pos_x, pos_y)<<"\n";//checking if point belongs to the line
+        //narysować punkty obliczone na mapie
     }
 }
 
@@ -201,5 +204,7 @@ void Entity::draw_traj(SDL_Renderer* renderer)
 
 
     SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+    SDL_SetRenderDrawColor(renderer, RED, 255);
+    SDL_RenderDrawPoints(renderer, p_col, 4);
 }
 

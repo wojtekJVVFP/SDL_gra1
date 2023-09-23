@@ -58,6 +58,7 @@
 		<Unit filename="include/color_definition.h" />
 		<Unit filename="include/geometry.h" />
 		<Unit filename="include/keys_handling.h" />
+		<Unit filename="include/structs.h" />
 		<Unit filename="src/CApp.cpp" />
 		<Unit filename="src/CApp_OnCleanup.cpp" />
 		<Unit filename="src/CApp_OnEvent.cpp" />

@@ -1,16 +1,11 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include "structs.h"
 struct Int_bool //struktura używana do zwracania wartości przez funkcję do badania kolizji
 {
     int ret_int;
     bool ret_bool;
-};
-
-struct Point
-{
-    int x;
-    int y;
 };
 
 class Object

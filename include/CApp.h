@@ -21,6 +21,7 @@ Na razie dodano wszystko do klasy CApp
 
 */
 
+
 class CApp
 {
 private:

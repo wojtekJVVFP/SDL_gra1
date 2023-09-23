@@ -440,13 +440,14 @@
 	"Player.h"
 	"color_definition.h"
 
-1686393424 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
+1695504696 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
 	<iostream>
 	"CApp.h"
 	"Map.h"
 	"color_definition.h"
 
-1693774679 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
+1695504696 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
+	"structs.h"
 
 1676813331 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\color_definition.h
 
@@ -465,7 +466,7 @@
 1689613473 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp.cpp
 	"CApp.h"
 
-1680603094 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\capp.h
+1695504560 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\capp.h
 	<SDL.h>
 	"CSurface.h"
 	"keys_handling.h"
@@ -501,7 +502,7 @@
 1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onrender.cpp
 	"CApp.h"
 
-1693774017 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\csurface.cpp
+1695505372 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\csurface.cpp
 	<iostream>
 	"CSurface.h"
 	"Player.h"
@@ -509,16 +510,17 @@
 	"Map.h"
 	"color_definition.h"
 
-1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\color_definition.h
+1695505372 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\color_definition.h
 
-1682440571 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\entity.cpp
+1695504371 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\entity.cpp
 	<iostream>
 	"CApp.h"
 	"Entity.h"
 	"color_definition.h"
 	"geometry.h"
 
-1681807057 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\entity.h
+1695506074 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\entity.h
+	"structs.h"
 
 1689776093 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\keys_handling.cpp
 	"keys_handling.h"
@@ -527,7 +529,7 @@
 1680602595 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\npc.h
 	"Entity.h"
 
-1689613473 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\npc.cpp
+1695503358 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\npc.cpp
 	"CApp.h"
 	"Npc.h"
 	"Map.h"
@@ -619,4 +621,6 @@
 1681808620 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\geometry.cpp
 	"geometry.h"
 	<math.h>
+
+1695504560 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\structs.h
 

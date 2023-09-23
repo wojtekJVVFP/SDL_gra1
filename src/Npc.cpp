@@ -23,7 +23,7 @@ run inside time controlled loop
 void Npc::wander(class Map* m, class Player* p)
 {
     SDL_Rect temp = player_rect;
-    static int dx = 0;
+    static int dx = 1;
     static int dy = 1;
 
     Int_bool ret;
@@ -37,7 +37,7 @@ void Npc::wander(class Map* m, class Player* p)
         move_entity(dx, dy);
         calc_traj(dx, dy);
     }
-    else
+    else    //collision detected
     {
         calc_collision(m, ret.ret_int);
         dx *= -1;

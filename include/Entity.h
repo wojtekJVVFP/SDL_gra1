@@ -1,6 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
+#include "structs.h"
 
 class Entity
 {
@@ -26,7 +27,8 @@ class Entity
         int player_width;
         int player_height;
         SDL_Rect player_rect;
-        float a,b;  //a, b coefficients of straight line y=ax+b
+        float a,b;  //a, b coefficients of straight line y=ax+b, trajectory of entity
+        SDL_Point p_col[4];
     private:
 };
 
