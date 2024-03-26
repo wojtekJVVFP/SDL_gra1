@@ -87,7 +87,8 @@ Map::Map()
 
     SDL_Rect temp;
     object_count = 1;
-    map_rects = new Object[object_count];
+    //map_rects = new Object[object_count];   //jest to już zbiornikiem na obiekty
+    map_rects.push_back(Object());
 
     map_rects[0].setRect({0,0,2,2});
     map_rects[0].setId(0);
@@ -113,7 +114,7 @@ Map::Map()
 }
 Map::~Map()
 {//dtor
-    delete[] map_rects;//dtor
+    //delete[] map_rects;//dtor
     SDL_DestroyTexture(stone_texture);
     SDL_DestroyTexture(border_texture);
 }
@@ -127,27 +128,21 @@ obj_count = 1;
 void Map::add_map_object(int obj_id, SDL_Rect obj_rect)
 {
     //tworzenie nowej tablicy
-    Object* temp_obj = new Object[object_count+1];
+    Object temp_obj = Object();
     //Object* temp2_obj = new Object[object_count+1];
 
-    //przepisywanie danych z map_rects do temp_obj
-    for(int i=0; i<object_count; i++)
-    {
-       temp_obj[i] = map_rects[i];
-    }
-    temp_obj[object_count].setRect(obj_rect);
-    temp_obj[object_count].setId(obj_id);
+    temp_obj.setRect(obj_rect);
+    temp_obj.setId(obj_id);
 
     //writing properties to the object
     if(obj_id == 2)
     {
-        temp_obj[object_count].setDestroyable(false);
+        temp_obj.setDestroyable(false);
     }
 
-    temp_obj[object_count].calc_points();   //calculating new points
+    temp_obj.calc_points();   //calculating new points
 
-    delete[] map_rects;
-    map_rects = temp_obj;   //temp_obj nie będzie tu kasowane, bo pamięć zostanie zwolniona w destruktorze klasy
+    map_rects.push_back(temp_obj);
 
     object_count++;
 }
@@ -160,22 +155,7 @@ funkcja do usuwania z mapy jednego obiektu o numerze obj_no
 */
 void Map::delete_map_object(int obj_no)
 {
-    //tworzenie nowej tablicy
-    Object* temp_obj = new Object[object_count-1];
-
-    //przepisywanie danych z map_rects do temp_obj z pominięciem obiektu o numerze obj_no
-    for(int i=0; i<obj_no; i++)
-    {
-       temp_obj[i] = map_rects[i];
-    }
-    for(int i=obj_no+1; i<object_count; i++)
-    {
-       temp_obj[i-1] = map_rects[i];
-    }
-
-    delete[] map_rects;
-    map_rects = temp_obj;
-
+    map_rects.erase(map_rects.begin()+obj_no);
     object_count--;
 }
 

@@ -1,6 +1,7 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include <vector>
 #include "structs.h"
 struct Int_bool //struktura używana do zwracania wartości przez funkcję do badania kolizji
 {
@@ -60,7 +61,8 @@ class Map
 
     protected:
         int object_count;   //ilość obiektów do rozmiaru p_map_rects
-        Object* map_rects;
+        //Object* map_rects;
+        std::vector<Object> map_rects;
         SDL_Texture* stone_texture;
         SDL_Texture* border_texture;
 

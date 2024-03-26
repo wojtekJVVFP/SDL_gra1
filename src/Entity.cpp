@@ -1,4 +1,6 @@
 #include <iostream>
+#include <array>
+#include <algorithm>
 #include "CApp.h"
 #include "Entity.h"
 #include "color_definition.h"
@@ -177,18 +179,34 @@ uses a,b and
 void Entity::calc_collision(class Map* m, int object_no)
 {
     int xp, yp;
-    int distances[4];   //distances from 4 object lines
+    array<int,4> distances;   //distances from 4 object lines
+
 
     for(int i=0; i < 4; i++)
     {
+
         xp = (int)((b-(m->map_rects[object_no].b[i]))/(m->map_rects[object_no].a[i]-a)); //calculating common point x and y
         yp = (int)(a*xp+b);
 
         p_col[i] = {xp, yp};
+        distances[i] = points_distance(xp, yp, pos_x, pos_y);
 
-        cout<<i<<": "<<"Punkt policzony: "<<xp<<" "<<yp<<" Odl od linii: "<<points_distance(xp, yp, pos_x, pos_y)<<"\n";//checking if point belongs to the line
+
+        cout<<i<<": "<<"Punkt policzony: "<<xp<<" "<<yp<<" Odl od linii: "<<distances[i]<<"\n";//checking if point belongs to the line
+        cout<<"xp, yp:"<<xp<<","<<yp<<", "<<"pos_x,pos_y:"<<pos_x<<","<<pos_y<<"\n";
         //narysować punkty obliczone na mapie
     }
+    //skąd wiedzieć, która prosta jest najbliżej?
+
+    int min_odl = *std::min_element(distances.begin(), distances.end());
+    int nr_prostej = (int) (std::min_element(distances.begin(), distances.end()) - distances.begin());
+    cout<<"kolizja z prosta nr: "<<nr_prostej<<"\n";
+
+    //z którą prostą nastąpiło zderzenie?
+    // b = m->map_rects[object_no].b[i]
+    // a = m->map_rects[object_no].a[i]
+
+
 }
 
 void Entity::draw_traj(SDL_Renderer* renderer)

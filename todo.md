@@ -19,4 +19,6 @@
  jego właściwości. Dodawanie właściwości obiektu w zależności od id można wykonać podczas jego dodawania we funkcji add_map_object
 
  - W trakcie rozwiązywania problemem z liczeniem kolizji, rysowanie punktów wspólnych w entity.cpp - punkty przecięcia są obliczane prawidłowo, generują się w prawidłowych miejscach
-
+- W trakcie zastępowania tablic vectorami bądź arrayami
+ -- zastępowanie aktualnie klasy Map
+ -- problem, bo nie zostało jeszcze zakończone ograniczanie przyjaźni
