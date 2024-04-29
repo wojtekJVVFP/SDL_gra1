@@ -18,7 +18,15 @@
 + dodać właściwość destroyable do klasy obiekt i znaleźć miejsce, w którym będą zdefiniowane właściowści różnych obiektów, np. żeby wystarczyło podać id obiektu, żeby przypisały się
  jego właściwości. Dodawanie właściwości obiektu w zależności od id można wykonać podczas jego dodawania we funkcji add_map_object
 
- - W trakcie rozwiązywania problemem z liczeniem kolizji, rysowanie punktów wspólnych w entity.cpp - punkty przecięcia są obliczane prawidłowo, generują się w prawidłowych miejscach
+
+ ***
+ + W trakcie rozwiązywania problemem z liczeniem kolizji, rysowanie punktów wspólnych w entity.cpp - punkty przecięcia są obliczane prawidłowo, generują się w prawidłowych miejscach
 - W trakcie zastępowania tablic vectorami bądź arrayami
  -- zastępowanie aktualnie klasy Map
  -- problem, bo nie zostało jeszcze zakończone ograniczanie przyjaźni
+
+***
+ + Zrobić, żeby pozycja obiektów była liczona w double, a nie int. Przeliczenie na int powinno zachodzić tylko w procedurze do rysowania
+ + postać napotyka na ograniczenie z lewej strony - ograniczenia znikły niewiadomo czemu po ustawieniu testu kolizji i ponownym skompilowaniu
+ - obliczanie kolizji z graczem i obiektami napisana pierwsze przykładowe demo do testowania działania programu, nie wprowadzono pełnego rozwiązania omega
+ - dodanie pełnego rozwiązania na kolizje i testowanie programu

@@ -9,7 +9,7 @@
 	"Player.h"
 	"Map.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl.h
 	"SDL_main.h"
 	"SDL_stdinc.h"
 	"SDL_assert.h"
@@ -47,12 +47,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_main.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_main.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_stdinc.h
 	"SDL_config.h"
 	<sys/types.h>
 	<stdio.h>
@@ -81,29 +81,29 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_config.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_config.h
 	"SDL_platform.h"
 	<winsdkver.h>
 	<sdkddkver.h>
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_platform.h
 	<AvailabilityMacros.h>
 	<TargetConditionals.h>
 	<winapifamily.h>
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\begin_code.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\begin_code.h
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\close_code.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\close_code.h
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_assert.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	<signal.h>
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_atomic.h
 	"SDL_stdinc.h"
 	"SDL_platform.h"
 	"begin_code.h"
@@ -111,7 +111,7 @@
 	<mbarrier.h>
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_audio.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_endian.h"
@@ -121,12 +121,12 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_error.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_error.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_endian.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<endian.h>
@@ -135,13 +135,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_mutex.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_thread.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_atomic.h"
@@ -152,18 +152,18 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_rwops.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_clipboard.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_cpuinfo.h
 	"SDL_stdinc.h"
 	<intrin.h>
 	<intrin.h>
@@ -185,7 +185,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_events.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_events.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -199,7 +199,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_video.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_video.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -207,13 +207,13 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_pixels.h
 	"SDL_stdinc.h"
 	"SDL_endian.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_rect.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_pixels.h"
@@ -221,7 +221,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_surface.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -230,11 +230,11 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_blendmode.h
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_keyboard.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_keycode.h"
@@ -242,34 +242,34 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_keycode.h
 	"SDL_stdinc.h"
 	"SDL_scancode.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_scancode.h
 	"SDL_stdinc.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_mouse.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_joystick.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_guid.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_guid.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_guid.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_gamecontroller.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_rwops.h"
@@ -278,17 +278,17 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_sensor.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_quit.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_gesture.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
@@ -296,70 +296,70 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_touch.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_filesystem.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_haptic.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"SDL_joystick.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_hidapi.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_hints.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_loadso.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_log.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_log.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_messagebox.h
 	"SDL_stdinc.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_metal.h
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_power.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_power.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_render.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_render.h
 	"SDL_stdinc.h"
 	"SDL_rect.h"
 	"SDL_video.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_shape.h
 	"SDL_stdinc.h"
 	"SDL_pixels.h"
 	"SDL_rect.h"
@@ -368,7 +368,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_system.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_system.h
 	"SDL_stdinc.h"
 	"SDL_keyboard.h"
 	"SDL_render.h"
@@ -376,24 +376,24 @@
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_timer.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_version.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_version.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_locale.h
 	"SDL_stdinc.h"
 	"SDL_error.h"
 	"begin_code.h"
 	"close_code.h"
 
-1675723875 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
+1675727475 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\sdl2\sdl_misc.h
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
@@ -434,19 +434,19 @@
 
 1679563285 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\player.h
 
-1680453773 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\player.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\player.cpp
 	<iostream>
 	"CApp.h"
 	"Player.h"
 	"color_definition.h"
 
-1710844161 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
+1710847761 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\map.cpp
 	<iostream>
 	"CApp.h"
 	"Map.h"
 	"color_definition.h"
 
-1710843449 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
+1710847049 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\map.h
 	<vector>
 	"structs.h"
 
@@ -464,10 +464,10 @@
 	"Map.h"
 	"color_definition.h"
 
-1689609873 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp.cpp
+1689613473 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp.cpp
 	"CApp.h"
 
-1695500960 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\capp.h
+1714322624 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\capp.h
 	<SDL.h>
 	"CSurface.h"
 	"keys_handling.h"
@@ -475,35 +475,35 @@
 	"Npc.h"
 	"Map.h"
 
-1680453773 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\csurface.h
+1680457373 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\csurface.h
 	<SDL.h>
 
-1689772221 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\keys_handling.h
+1689775821 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\keys_handling.h
 	"CApp.h"
 
-1680455436 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\player.h
+1680459036 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\player.h
 	"Entity.h"
 
-1680453773 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oncleanup.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oncleanup.cpp
 	"CApp.h"
 
-1680457718 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onevent.cpp
-	"CApp.h"
-	<iostream>
-
-1686389466 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oninit.cpp
+1680461318 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onevent.cpp
 	"CApp.h"
 	<iostream>
 
-1680861973 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onloop.cpp
+1686393066 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_oninit.cpp
+	"CApp.h"
+	<iostream>
+
+1680865573 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onloop.cpp
 	"CApp.h"
 	<time.h>
 	<iostream>
 
-1680453773 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onrender.cpp
+1680457373 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\capp_onrender.cpp
 	"CApp.h"
 
-1695501772 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\csurface.cpp
+1695505372 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\csurface.cpp
 	<iostream>
 	"CSurface.h"
 	"Player.h"
@@ -511,26 +511,29 @@
 	"Map.h"
 	"color_definition.h"
 
-1695501772 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\color_definition.h
+1695505372 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\color_definition.h
 
-1711384647 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\entity.cpp
+1714414631 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\entity.cpp
 	<iostream>
+	<array>
+	<algorithm>
 	"CApp.h"
 	"Entity.h"
 	"color_definition.h"
+
+1714414332 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\entity.h
 	"geometry.h"
 
-1695502666 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\entity.h
-	"structs.h"
-
-1689772493 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\keys_handling.cpp
+1711840029 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\keys_handling.cpp
 	"keys_handling.h"
 	<iostream>
 
-1680598995 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\npc.h
+1711904724 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\npc.h
 	"Entity.h"
 
-1695499758 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\npc.cpp
+1714413679 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\npc.cpp
+	<iostream>
+	<array>
 	"CApp.h"
 	"Npc.h"
 	"Map.h"
@@ -617,12 +620,12 @@
 	"Map.h"
 	"color_definition.h"
 
-1681803388 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\geometry.h
-
-1711385834 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\geometry.cpp
-	"geometry.h"
+1711911060 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\geometry.h
 	<math.h>
 	<iostream>
 
-1695500960 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\structs.h
+1714414071 source:c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\src\geometry.cpp
+	"geometry.h"
+
+1695504560 c:\users\jvvfp\onedrive\codeblocks\sdl_gra1\include\structs.h
 

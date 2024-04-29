@@ -4,7 +4,7 @@
 #include "CApp.h"
 #include "Entity.h"
 #include "color_definition.h"
-#include "geometry.h"
+
 
 using namespace std;
 
@@ -30,13 +30,13 @@ Entity::Entity(const Entity& other)
     //copy ctor
 }
 
-int Entity::get_x()
+double Entity::get_x()
 {
    return pos_x;
 }
 
 
-int Entity::get_y()
+double Entity::get_y()
 {
   return pos_y;
 }
@@ -77,8 +77,8 @@ bool Entity::load_texture(const char* filename, SDL_Renderer* render)
 void Entity::render(SDL_Renderer* renderer)
 {
     SDL_SetRenderDrawColor(renderer, WHITE, 255);
-    player_rect.x = pos_x;
-    player_rect.y = pos_y;
+    player_rect.x = (int) pos_x;
+    player_rect.y = (int) pos_y;
 
     SDL_RenderCopy(renderer, texture, NULL, &player_rect);
 }
@@ -151,17 +151,18 @@ P1 = (pos_x, pos_y)
 P2 = (pos_x+dx, pos_y+dy)
 
 */
-void Entity::calc_traj(int dx, int dy)
+void Entity::calc_traj(double dx, double dy)
 {
-    if(dx!=0)   //if dividing by non zero value
+
+    if((dx > 0.000001) || (dx < -0.000001))   //if dividing by non zero value, in double
     {
-        a = (float) dy / dx;
+        a = dy / dx;
     }
     else
     {
         a = 1000;   //let's assume this as straight vertical line
     }
-    b = (float) pos_y - a * (float)pos_x;
+    b = pos_y - a * pos_x;
 }
 
 
@@ -175,8 +176,10 @@ inputs:
 
 uses a[4] and b[4] and points[4] from map.h
 uses a,b and
+
+return new increments value
 */
-void Entity::calc_collision(class Map* m, int object_no)
+Increments Entity::calc_collision(class Map* m, int object_no, Increments dxdy)
 {
     int xp, yp;
     array<int,4> distances;   //distances from 4 object lines
@@ -198,7 +201,6 @@ void Entity::calc_collision(class Map* m, int object_no)
     }
     //skąd wiedzieć, która prosta jest najbliżej?
 
-    int min_odl = *std::min_element(distances.begin(), distances.end());
     int nr_prostej = (int) (std::min_element(distances.begin(), distances.end()) - distances.begin());
     cout<<"kolizja z prosta nr: "<<nr_prostej<<"\n";
 
@@ -206,7 +208,13 @@ void Entity::calc_collision(class Map* m, int object_no)
     // b = m->map_rects[object_no].b[i]
     // a = m->map_rects[object_no].a[i]
 
+    //przeliczyć kąt uderzenia w odniesienieniu do ox - kąt gamma
+    double gamma = inc_to_ang(dxdy);
+    double omega = 180 - 2*gamma;
+    Increments out = ang_to_inc(omega);
 
+        //cout<<"5 st na rad: "<<ang_to_inc(5).dx<<", "<<ang_to_inc(5).dy<<"\n";
+    return out;
 }
 
 void Entity::draw_traj(SDL_Renderer* renderer)

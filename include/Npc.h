@@ -6,10 +6,10 @@
 class Npc: public Entity
 {
     public:
-        Npc(int x=100, int y=100);
+        Npc(int x=300, int y=100);
         ~Npc();
         void wander(class Map* m, class Player* p);
-        void move_entity(int x, int y);
+        void move_entity(double x, double y);
 
         friend class CApp;
         friend class Keys_Handling;
